@@ -77,7 +77,8 @@ class EventDashboard extends Component {
     newEvent.hostPhotoURL = '/assets/user.png';
     const updatedEvent = [...this.state.events, newEvent];
     this.setState({
-      events: updatedEvent
+      events: updatedEvent,
+      isOpen: false
     });
   };
   handleSelectedEvent = eventToOpen => () => {
@@ -100,12 +101,22 @@ class EventDashboard extends Component {
       selectedEvent: null
     });
   };
+  handleDeleteEvent = eventID => () => {
+    const updatedEvent = this.state.events.filter(eve => eve.id !== eventID);
+    this.setState({
+      events: updatedEvent
+    });
+  };
   render() {
     const { selectedEvent } = this.state;
     return (
       <Grid>
         <Grid.Column width={10}>
-          <EventList onSelectedEvent={this.handleSelectedEvent} events={this.state.events} />
+          <EventList
+            deleteEvent={this.handleDeleteEvent}
+            onSelectedEvent={this.handleSelectedEvent}
+            events={this.state.events}
+          />
         </Grid.Column>
         <Grid.Column width={6}>
           <Button onClick={this.handleFormOpen} positive content="Create Event" />
