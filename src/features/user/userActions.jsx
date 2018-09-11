@@ -79,8 +79,9 @@ export const deletePhoto = photo => async (dispatch, getState, { getFirebase, ge
     throw new Error('Problem deleting the photo');
   }
 };
-export const setMainPhoto = photo => async (dispatch, getState, { getFirebase }) => {
+export const setMainPhoto = photo => async (dispatch, getState, { getFirebase, getFirestore }) => {
   const firebase = getFirebase();
+
   try {
     await firebase.updateProfile({
       photoURL: photo.url
@@ -88,5 +89,49 @@ export const setMainPhoto = photo => async (dispatch, getState, { getFirebase })
   } catch (error) {
     console.log(error);
     throw new Error('Problem setting main photo');
+  }
+};
+export const goingToEvent = event => async (dispatch, getState, { getFirestore }) => {
+  const firestore = getFirestore();
+  const user = firestore.auth().currentUser;
+  const photoURL = getState().firebase.profile.photoURL;
+  const attendee = {
+    displayName: user.displayName,
+    going: true,
+    joinDate: Date.now(),
+    photoURL: photoURL || '/assets/user.png',
+    host: false
+  };
+  try {
+    await firestore.update(`events/${event.id}`, {
+      [`attendees.${user.uid}`]: attendee
+    });
+    await firestore.set(`event_attendee/${event.id}_${user.uid}`, {
+      eventId: event.id,
+      userUid: user.uid,
+      eventDate: event.date,
+      host: false
+    });
+    toastr.success('Success!', 'Signing up to event successfully');
+  } catch (error) {
+    console.log(error);
+    toastr.error('Oops!', 'Problem signing up to event ');
+  }
+};
+export const cancelGoingToEvent = event => async (dispatch, getState, { getFirestore }) => {
+  const firestore = getFirestore();
+  const user = firestore.auth().currentUser;
+  try {
+    // How to delete individual field in firestore
+    // Delete Object of attendees
+    await firestore.update(`events/${event.id}`, {
+      [`attendees.${user.uid}`]: firestore.FieldValue.delete()
+    });
+    // Remove document
+    await firestore.delete(`event_attendee/${event.id}_${user.uid}`);
+    toastr.success('Success!', 'Thank you');
+  } catch (error) {
+    console.log(error);
+    toastr.error('Oops!', 'Something went wrong! ');
   }
 };
