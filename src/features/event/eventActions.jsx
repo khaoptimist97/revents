@@ -1,5 +1,5 @@
 import { toastr } from 'react-redux-toastr';
-import { DELETE_EVENT, FETCH_EVENTS } from './eventConstants';
+import { FETCH_EVENTS } from './eventConstants';
 import { asyncActionStart, asyncActionFinish, asyncActionError } from '../async/asyncActions';
 import { createNewEvent } from '../../app/common/util/helpers';
 import { moment } from 'moment';
@@ -57,23 +57,40 @@ export const cancelToggle = (cancelled, eventId) => async (dispatch, getState, {
   }
 };
 
-export const getEventsForDashboard = () => async (dispatch, getState) => {
+export const getEventsForDashboard = lastEvent => async (dispatch, getState) => {
   let today = new Date(Date.now());
   const firestore = firebase.firestore();
-  const eventsQuery = firestore.collection('events').where('date', '>=', today);
-  console.log(eventsQuery);
+  const queryRef = firestore.collection('events');
   try {
     dispatch(asyncActionStart());
-    let querySnapshot = await eventsQuery.get();
-    console.log(querySnapshot);
+    // Kiem tra co lastEvent ko? Vi do la truong hop initial load, moi dau load event len page
+    let startAfter = lastEvent && (await queryRef.doc(lastEvent.id).get());
+    let query;
+    lastEvent
+      ? (query = queryRef
+          .where('date', '>=', today)
+          .orderBy('date')
+          .startAfter(startAfter)
+          .limit(2))
+      : (query = query = queryRef
+          .where('date', '>=', today)
+          .orderBy('date')
+          .limit(2));
+    let querySnapshot = await query.get();
+    // Dua vao querySnapshot co bao nhieu docs de xem xet co thuc hien loop ko, neu ko co docs nao thi return tai day.
+    if (querySnapshot.docs.length === 0) {
+      dispatch(asyncActionFinish());
+      return querySnapshot;
+    }
     let events = [];
     for (let i = 0; i < querySnapshot.docs.length; i++) {
       let evt = { ...querySnapshot.docs[i].data(), id: querySnapshot.docs[i].id };
       events.push(evt);
     }
-    console.log(events);
     dispatch({ type: FETCH_EVENTS, payload: { events } });
     dispatch(asyncActionFinish());
+    // Return de su dung thong tin length cua querySnapshot tren UI
+    return querySnapshot;
   } catch (error) {
     console.log(error);
     dispatch(asyncActionError());

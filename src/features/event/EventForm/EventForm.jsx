@@ -23,7 +23,8 @@ const mapState = state => {
   }
   return {
     initialValues: event,
-    event
+    event,
+    hostedBy: state.firebase.auth.displayName
   };
 };
 const actions = {
@@ -117,6 +118,7 @@ class EventForm extends Component {
   }
   onFormSubmit = values => {
     values.venueLatLng = this.state.venueLatLng;
+    values.hostedBy = this.props.hostedBy;
     if (Object.keys(values.venueLatLng).length === 0) {
       values.venueLatLng = this.props.event.venueLatLng;
     }
