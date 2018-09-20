@@ -1,4 +1,9 @@
 /*global google*/
+/*global state*/
+/*global handleCitySelect*/
+/*global handleVenueSelect*/
+/*global handleScriptLoad*/
+/*global onFormSubmit*/
 
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
@@ -8,6 +13,7 @@ import { withFirestore } from 'react-redux-firebase';
 import Script from 'react-load-script';
 import { createEvent, updateEvent, cancelToggle } from '../eventActions';
 import { composeValidators, combineValidators, isRequired, hasLengthGreaterThan } from 'revalidate';
+import moment from 'moment'
 import { Segment, Form, Button, Grid, Header } from 'semantic-ui-react';
 import TextInput from '../../../app/common/form/TextInput';
 import TextArea from '../../../app/common/form/TextArea';
@@ -24,7 +30,8 @@ const mapState = state => {
   return {
     initialValues: event,
     event,
-    hostedBy: state.firebase.auth.displayName
+    hostedBy: state.firebase.auth.displayName,
+    loading: state.async.loading
   };
 };
 const actions = {
@@ -116,14 +123,14 @@ class EventForm extends Component {
     const { firestore, match } = this.props;
     await firestore.unsetListener(`events/${match.params.id}`);
   }
-  onFormSubmit = values => {
+  onFormSubmit = async values => {
     values.venueLatLng = this.state.venueLatLng;
     values.hostedBy = this.props.hostedBy;
     if (Object.keys(values.venueLatLng).length === 0) {
       values.venueLatLng = this.props.event.venueLatLng;
     }
     if (this.props.initialValues && this.props.initialValues.id) {
-      this.props.updateEvent(values);
+      await this.props.updateEvent(values);
       this.props.history.goBack();
     } else {
       this.props.createEvent(values);
@@ -132,7 +139,7 @@ class EventForm extends Component {
   };
 
   render() {
-    const { invalid, submitting, pristine, event, cancelToggle } = this.props;
+    const { loading, invalid, submitting, pristine, event, cancelToggle } = this.props;
     return (
       <Grid>
         <Script
@@ -192,10 +199,10 @@ class EventForm extends Component {
                 time="HH:mm"
                 showTimeSelect
               />
-              <Button disabled={invalid || submitting || pristine} positive type="submit">
+              <Button loading={loading} disabled={invalid || submitting || pristine} positive type="submit">
                 Submit
               </Button>
-              <Button onClick={this.props.history.goBack} type="button">
+              <Button disabled={loading} onClick={this.props.history.goBack} type="button">
                 Cancel
               </Button>
               <Button

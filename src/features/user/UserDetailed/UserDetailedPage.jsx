@@ -1,16 +1,16 @@
 import React, { Component } from 'react';
-import { Button, Grid, Segment } from 'semantic-ui-react';
+import { Grid } from 'semantic-ui-react';
 import { compose } from 'redux';
-import { Link } from 'react-router-dom';
 import { firestoreConnect, isEmpty } from 'react-redux-firebase';
 import { connect } from 'react-redux';
 import UserDetailedHeader from './UserDetailedHeader';
 import UserDetailedDescription from './UserDetailedDescription';
 import UserDetailedPhotos from './UserDetailedPhotos';
 import UserDetailedEvents from './UserDetailedEvents';
+import UserDetailedSidebar from './UserDetailedSidebar';
 import { userDetailedQuery } from '../userQueries';
 import LoadingComponent from '../../../app/layout/LoadingComponent';
-import { getUserEvents } from '../../user/userActions';
+import { getUserEvents, followUser, unfollowUser } from '../../user/userActions';
 
 const mapState = (state, ownProps) => {
   let userUid = null;
@@ -29,11 +29,14 @@ const mapState = (state, ownProps) => {
     eventLoading: state.async.loading,
     auth: state.firebase.auth,
     photos: state.firestore.ordered.photos,
-    requesting: state.firestore.status.requesting
+    requesting: state.firestore.status.requesting,
+    following: state.firestore.ordered.following
   };
 };
 const actions = {
-  getUserEvents
+  getUserEvents,
+  followUser,
+  unfollowUser
 };
 
 class UserDetailedPage extends Component {
@@ -43,11 +46,24 @@ class UserDetailedPage extends Component {
   changeTab = (e, data) => {
     this.props.getUserEvents(this.props.userUid, data.activeIndex);
   };
+
   render() {
-    const { profile, photos, auth, userUid, requesting, events, eventLoading } = this.props;
+    const {
+      profile,
+      photos,
+      auth,
+      userUid,
+      requesting,
+      events,
+      eventLoading,
+      followUser,
+      unfollowUser,
+      following
+    } = this.props;
     const isCurrentUser = auth.uid === userUid;
     const loading = Object.values(requesting).some(a => a === true);
     if (loading) return <LoadingComponent inverted={true} />;
+    const isFollowing = !isEmpty(following);
     return (
       <Grid>
         <Grid.Column width={16}>
@@ -56,16 +72,13 @@ class UserDetailedPage extends Component {
         <Grid.Column width={12}>
           <UserDetailedDescription profile={profile} />
         </Grid.Column>
-        <Grid.Column width={4}>
-          <Segment>
-            {isCurrentUser ? (
-              <Button as={Link} to="/settings/basic" color="teal" fluid basic content="Edit Profile" />
-            ) : (
-              <Button color="teal" fluid basic content="Follow User" />
-            )}
-          </Segment>
-        </Grid.Column>
-
+        <UserDetailedSidebar
+          isCurrentUser={isCurrentUser}
+          followUser={followUser}
+          profile={profile}
+          isFollowing={isFollowing}
+          unfollowUser={unfollowUser}
+        />
         {photos && photos.length > 0 ? (
           <Grid.Column width={12}>
             <UserDetailedPhotos photos={photos} auth={auth} />
@@ -84,5 +97,5 @@ export default compose(
     mapState,
     actions
   ),
-  firestoreConnect((auth, userUid) => userDetailedQuery(auth, userUid))
+  firestoreConnect((auth, userUid, match) => userDetailedQuery(auth, userUid, match))
 )(UserDetailedPage);

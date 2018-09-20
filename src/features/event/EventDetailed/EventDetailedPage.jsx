@@ -23,7 +23,8 @@ const mapState = (state, ownProps) => {
     auth: state.firebase.auth,
     eventChat:
       !isEmpty(state.firebase.data.event_chat) &&
-      ObjectToArray(state.firebase.data.event_chat[ownProps.match.params.id])
+      ObjectToArray(state.firebase.data.event_chat[ownProps.match.params.id]),
+    loading: state.async.loading
   };
 };
 const actions = {
@@ -42,7 +43,7 @@ class EventDetailedPage extends Component {
     await firestore.unsetListener(`events/${match.params.id}`);
   }
   render() {
-    const { event, auth, goingToEvent, cancelGoingToEvent, addEventComment, eventChat } = this.props;
+    const { loading, event, auth, goingToEvent, cancelGoingToEvent, addEventComment, eventChat } = this.props;
     const attendees = event && event.attendees && ObjectToArray(event.attendees);
     const isHost = event.hostUid === auth.uid;
     const isGoing = attendees && attendees.some(e => e.id === auth.uid);
@@ -55,6 +56,7 @@ class EventDetailedPage extends Component {
             isHost={isHost}
             isGoing={isGoing}
             goingToEvent={goingToEvent}
+            loading={loading}
             cancelGoingToEvent={cancelGoingToEvent}
           />
           <EventDetailedInfo event={event} />
