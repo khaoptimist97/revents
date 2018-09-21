@@ -5,11 +5,14 @@ import EventDetailedHeader from './EventDetailedHeader';
 import EventDetailedInfo from './EventDetailedInfo';
 import EventDetailedChat from './EventDetailedChat';
 import EventDetailedSidebar from './EventDetailedSidebar';
+import LoadingComponent from '../../../app/layout/LoadingComponent';
 import { withFirestore, firebaseConnect, isEmpty } from 'react-redux-firebase';
 import { compose } from 'redux';
 import { ObjectToArray, createDataTree } from '../../../app/common/util/helpers';
 import { goingToEvent, cancelGoingToEvent } from '../../user/userActions';
 import { addEventComment } from '../eventActions';
+import { openModal } from '../../modals/modalActions';
+import { toastr } from 'react-redux-toastr';
 
 const mapState = (state, ownProps) => {
   let event = {};
@@ -24,30 +27,59 @@ const mapState = (state, ownProps) => {
     eventChat:
       !isEmpty(state.firebase.data.event_chat) &&
       ObjectToArray(state.firebase.data.event_chat[ownProps.match.params.id]),
-    loading: state.async.loading
+    loading: state.async.loading,
+    requesting: state.firestore.status.requesting
   };
 };
 const actions = {
   goingToEvent,
   cancelGoingToEvent,
-  addEventComment
+  addEventComment,
+  openModal
 };
 
 class EventDetailedPage extends Component {
+  state = {
+    initialLoading: true
+  };
   async componentDidMount() {
     const { firestore, match } = this.props;
+    let event = await firestore.get(`events/${match.params.id}`);
+    if (!event.exists) {
+      this.props.history.push('/error');
+      toastr.error('Error', 'The event you are looking for is not found!');
+    }
     await firestore.setListener(`events/${match.params.id}`);
+    this.setState({
+      initialLoading: false
+    });
   }
   async componentWillUnmount() {
     const { firestore, match } = this.props;
     await firestore.unsetListener(`events/${match.params.id}`);
   }
   render() {
-    const { loading, event, auth, goingToEvent, cancelGoingToEvent, addEventComment, eventChat } = this.props;
+    const {
+      openModal,
+      loading,
+      event,
+      auth,
+      goingToEvent,
+      cancelGoingToEvent,
+      addEventComment,
+      eventChat,
+      requesting,
+      match
+    } = this.props;
     const attendees = event && event.attendees && ObjectToArray(event.attendees);
     const isHost = event.hostUid === auth.uid;
     const isGoing = attendees && attendees.some(e => e.id === auth.uid);
     const chatTree = !isEmpty(eventChat) && createDataTree(eventChat);
+    const authenticated = auth.isLoaded && !auth.isEmpty;
+    const loadingEvent = requesting[`events/${match.params.id}`];
+
+    if (loadingEvent || this.state.initialLoading) return <LoadingComponent inverted={true} />;
+
     return (
       <Grid>
         <Grid.Column width={10}>
@@ -57,10 +89,14 @@ class EventDetailedPage extends Component {
             isGoing={isGoing}
             goingToEvent={goingToEvent}
             loading={loading}
+            authenticated={authenticated}
+            openModal={openModal}
             cancelGoingToEvent={cancelGoingToEvent}
           />
           <EventDetailedInfo event={event} />
-          <EventDetailedChat eventChat={chatTree} addEventComment={addEventComment} eventId={event.id} />
+          {authenticated && (
+            <EventDetailedChat eve ntChat={chatTree} addEventComment={addEventComment} eventId={event.id} />
+          )}
         </Grid.Column>
         <Grid.Column width={6}>
           <EventDetailedSidebar attendees={attendees} />

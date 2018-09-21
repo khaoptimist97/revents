@@ -11,6 +11,7 @@ import UserDetailedSidebar from './UserDetailedSidebar';
 import { userDetailedQuery } from '../userQueries';
 import LoadingComponent from '../../../app/layout/LoadingComponent';
 import { getUserEvents, followUser, unfollowUser } from '../../user/userActions';
+import { toastr } from 'react-redux-toastr';
 
 const mapState = (state, ownProps) => {
   let userUid = null;
@@ -41,6 +42,11 @@ const actions = {
 
 class UserDetailedPage extends Component {
   async componentDidMount() {
+    let user = await this.props.firestore.get(`users/${this.props.match.params.id}`);
+    if (!user.exists) {
+      this.props.history.push('/error');
+      toastr.error('Not found', 'This is not the event you are looking for');
+    }
     await this.props.getUserEvents(this.props.userUid);
   }
   changeTab = (e, data) => {
@@ -58,10 +64,11 @@ class UserDetailedPage extends Component {
       eventLoading,
       followUser,
       unfollowUser,
-      following
+      following,
+      match
     } = this.props;
     const isCurrentUser = auth.uid === userUid;
-    const loading = Object.values(requesting).some(a => a === true);
+    const loading = requesting[`users/${match.params.id}`];
     if (loading) return <LoadingComponent inverted={true} />;
     const isFollowing = !isEmpty(following);
     return (
