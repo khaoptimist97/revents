@@ -53,7 +53,7 @@ export const updateEvent = event => {
         }
         await batch.commit();
       } else {
-        await firestore.update(`events/${event.id}`, event);
+        await eventDocRef.update(event);
       }
       dispatch(asyncActionFinish());
       toastr.success('Success!', 'Event has been updated');

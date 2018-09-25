@@ -71,7 +71,12 @@ class EventDetailedPage extends Component {
       requesting,
       match
     } = this.props;
-    const attendees = event && event.attendees && ObjectToArray(event.attendees);
+    const attendees =
+      event &&
+      event.attendees &&
+      ObjectToArray(event.attendees).sort(function(a, b) {
+        return a.joinDate - b.joinDate;
+      });
     const isHost = event.hostUid === auth.uid;
     const isGoing = attendees && attendees.some(e => e.id === auth.uid);
     const chatTree = !isEmpty(eventChat) && createDataTree(eventChat);
@@ -112,5 +117,5 @@ export default compose(
     mapState,
     actions
   ),
-  firebaseConnect(props => [`event_chat/${props.match.params.id}`])
+  firebaseConnect(props => props.auth.isLoaded && !props.auth.isEmpty && [`event_chat/${props.match.params.id}`])
 )(EventDetailedPage);

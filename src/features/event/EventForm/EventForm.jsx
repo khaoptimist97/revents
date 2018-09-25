@@ -1,9 +1,4 @@
 /*global google*/
-/*global state*/
-/*global handleCitySelect*/
-/*global handleVenueSelect*/
-/*global handleScriptLoad*/
-/*global onFormSubmit*/
 
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
@@ -13,7 +8,6 @@ import { withFirestore } from 'react-redux-firebase';
 import Script from 'react-load-script';
 import { createEvent, updateEvent, cancelToggle } from '../eventActions';
 import { composeValidators, combineValidators, isRequired, hasLengthGreaterThan } from 'revalidate';
-import moment from 'moment'
 import { Segment, Form, Button, Grid, Header } from 'semantic-ui-react';
 import TextInput from '../../../app/common/form/TextInput';
 import TextArea from '../../../app/common/form/TextArea';
@@ -205,13 +199,15 @@ class EventForm extends Component {
               <Button disabled={loading} onClick={this.props.history.goBack} type="button">
                 Cancel
               </Button>
-              <Button
-                onClick={() => cancelToggle(!event.cancelled, event.id)}
-                type="button"
-                color={event.cancelled ? 'green' : 'red'}
-                floated="right"
-                content={event.cancelled ? 'Reactivate Event' : 'Cancel Event'}
-              />
+              {event.id && (
+                <Button
+                  onClick={() => cancelToggle(!event.cancelled, event.id)}
+                  type="button"
+                  color={event.cancelled ? 'green' : 'red'}
+                  floated="right"
+                  content={event.cancelled ? 'Reactivate Event' : 'Cancel Event'}
+                />
+              )}
             </Form>
           </Segment>
         </Grid.Column>
