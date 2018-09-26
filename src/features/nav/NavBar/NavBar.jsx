@@ -17,7 +17,7 @@ const mapState = state => {
 const actions = {
   openModal
 };
-class NavBar extends Component {
+export class NavBar extends Component {
   state = {
     authenticated: false
   };

@@ -3,11 +3,14 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@lingui/react": "^2.7.0",
+    "ajv": "^6.5.4",
     "cuid": "^2.1.1",
     "date-fns": "^1.29.0",
     "firebase": "^4.12.1",
     "google-map-react": "^0.34.0",
     "history": "^4.7.2",
+    "jest-cli": "^23.6.0",
     "moment": "^2.22.0",
     "react": "^16.3.0",
     "react-cropper": "^1.0.1",
@@ -43,7 +46,16 @@
     "deploy": "npm run build && firebase deploy"
   },
   "devDependencies": {
+    "@lingui/macro": "^2.7.0",
+    "babel-core": "^6.26.3",
+    "babel-plugin-macros": "^2.4.2",
+    "enzyme": "^3.6.0",
+    "enzyme-adapter-react-16": "^1.5.0",
+    "enzyme-to-json": "^3.3.4",
+    "jest": "^23.6.0",
+    "react-test-renderer": "^16.5.2",
     "redux-devtools-extension": "^2.13.2",
+    "sinon": "^6.3.4",
     "source-map-explorer": "^1.5.0"
   }
 }
