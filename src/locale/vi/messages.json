@@ -1,0 +1,22 @@
+{
+  "app.GetStarted": {
+    "translation": "Bat dau thoi nao!",
+    "defaults": "Get Started",
+    "origin": [
+      [
+        "src/features/home/HomePage.jsx",
+        17
+      ]
+    ]
+  },
+  "appName": {
+    "translation": "Lam bat ki dieu gi ban muon",
+    "defaults": "Do whatever you want to do",
+    "origin": [
+      [
+        "src/features/home/HomePage.jsx",
+        14
+      ]
+    ]
+  }
+}

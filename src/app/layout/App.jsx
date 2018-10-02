@@ -4,6 +4,11 @@ import { Container } from 'semantic-ui-react';
 import Loadable from 'react-loadable';
 import LoadingComponent from '../../app/layout/LoadingComponent';
 import { UserIsAuthenticated } from '../../features/auth/authWrapper';
+import { I18nProvider } from '@lingui/react';
+import catalogVi from '../../locale/vi/messages';
+import { setupI18n } from '@lingui/core';
+
+export const i18n = setupI18n();
 
 const AsyncHomePage = Loadable({
   loader: () => import('../../features/home/HomePage'),
@@ -49,34 +54,36 @@ const AsyncModalManager = Loadable({
 class App extends Component {
   render() {
     return (
-      <div>
-        <AsyncModalManager />
-        <Switch>
-          <Route exact path="/" component={AsyncHomePage} />
-        </Switch>
-        <Route
-          path="/(.+)"
-          render={() => (
-            <div>
-              <AsyncNavBar />
-              <Container className="main">
-                <Switch>
-                  <Route path="/events" component={AsyncEventDashboard} />
-                  <Route path="/event/:id" component={AsyncEventDetailedPage} />
-                  <Route path="/manage/:id" component={UserIsAuthenticated(AsyncEventForm)} />
-                  <Route path="/people" component={UserIsAuthenticated(AsyncPeopleDashboard)} />
-                  <Route path="/profile/:id" component={UserIsAuthenticated(AsyncUserDetailedPage)} />
-                  <Route path="/settings" component={UserIsAuthenticated(AsyncSettingsDashboard)} />
-                  <Route path="/createEvent" component={UserIsAuthenticated(AsyncEventForm)} />
-                  <Route path="/error" component={AsyncNotFound} />
-                  {/* Every wrong path return to Not found component */}
-                  <Route component={AsyncNotFound} />
-                </Switch>
-              </Container>
-            </div>
-          )}
-        />
-      </div>
+      <I18nProvider language="vi" catalogs={{ vi: catalogVi }}>
+        <div>
+          <AsyncModalManager />
+          <Switch>
+            <Route exact path="/" component={AsyncHomePage} />
+          </Switch>
+          <Route
+            path="/(.+)"
+            render={() => (
+              <div>
+                <AsyncNavBar />
+                <Container className="main">
+                  <Switch>
+                    <Route path="/events" component={AsyncEventDashboard} />
+                    <Route path="/event/:id" component={AsyncEventDetailedPage} />
+                    <Route path="/manage/:id" component={UserIsAuthenticated(AsyncEventForm)} />
+                    <Route path="/people" component={UserIsAuthenticated(AsyncPeopleDashboard)} />
+                    <Route path="/profile/:id" component={UserIsAuthenticated(AsyncUserDetailedPage)} />
+                    <Route path="/settings" component={UserIsAuthenticated(AsyncSettingsDashboard)} />
+                    <Route path="/createEvent" component={UserIsAuthenticated(AsyncEventForm)} />
+                    <Route path="/error" component={AsyncNotFound} />
+                    {/* Every wrong path return to Not found component */}
+                    <Route component={AsyncNotFound} />
+                  </Switch>
+                </Container>
+              </div>
+            )}
+          />
+        </div>
+      </I18nProvider>
     );
   }
 }

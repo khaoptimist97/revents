@@ -1,0 +1,22 @@
+{
+  "app.GetStarted": {
+    "translation": "",
+    "defaults": "Get Started",
+    "origin": [
+      [
+        "src/features/home/HomePage.jsx",
+        17
+      ]
+    ]
+  },
+  "appName": {
+    "translation": "",
+    "defaults": "Do whatever you want to do",
+    "origin": [
+      [
+        "src/features/home/HomePage.jsx",
+        14
+      ]
+    ]
+  }
+}

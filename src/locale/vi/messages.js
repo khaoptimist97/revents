@@ -1,0 +1,1 @@
+/* eslint-disable */module.exports={languageData:{"plurals":function(n,ord){if(ord)return n==1?"one":"other";return"other"}},messages:{"app.GetStarted":"Bat dau thoi nao!","appName":"Lam bat ki dieu gi ban muon"}};
