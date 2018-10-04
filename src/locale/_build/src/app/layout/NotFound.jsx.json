@@ -1,0 +1,11 @@
+{
+  "page.error": {
+    "defaults": "Error Not Found",
+    "origin": [
+      [
+        "src/app/layout/NotFound.jsx",
+        8
+      ]
+    ]
+  }
+}

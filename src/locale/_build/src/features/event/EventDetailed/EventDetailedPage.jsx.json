@@ -1,0 +1,18 @@
+{
+  "Error": {
+    "origin": [
+      [
+        "src/features/event/EventDetailed/EventDetailedPage.jsx",
+        52
+      ]
+    ]
+  },
+  "The event you are looking for is not found!": {
+    "origin": [
+      [
+        "src/features/event/EventDetailed/EventDetailedPage.jsx",
+        52
+      ]
+    ]
+  }
+}

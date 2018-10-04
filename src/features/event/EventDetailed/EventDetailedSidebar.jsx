@@ -1,12 +1,14 @@
 import React from 'react';
 import { Segment, List, Item, Label } from 'semantic-ui-react';
 import { Link } from 'react-router-dom';
+import { t } from '@lingui/macro';
 
-const EventDetailedSidebar = ({ attendees }) => {
+const EventDetailedSidebar = ({ attendees, i18n }) => {
   return (
     <div>
       <Segment textAlign="center" style={{ border: 'none' }} attached="top" secondary inverted color="teal">
-        {attendees && attendees.length} {attendees && attendees.length === 1 ? 'Person' : 'People'} Going
+        {attendees && attendees.length} {attendees && attendees.length === 1 ? i18n._(t`Person`) : i18n._(t`People`)}{' '}
+        {i18n._(t`Going`)}
       </Segment>
       <Segment attached>
         <List relaxed divided>
@@ -15,7 +17,7 @@ const EventDetailedSidebar = ({ attendees }) => {
               <Item key={attendee.id} style={{ position: 'relative' }}>
                 {attendee.host && (
                   <Label style={{ position: 'absolute' }} color="orange" ribbon="right">
-                    Host
+                    {i18n._(t`Host`)}
                   </Label>
                 )}
                 <Item.Image size="tiny" src={attendee.photoURL} />

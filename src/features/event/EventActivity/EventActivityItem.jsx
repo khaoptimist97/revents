@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Feed } from 'semantic-ui-react';
 import { Link } from 'react-router-dom';
+import { Trans } from '@lingui/macro';
 import distanceInWordsToNow from 'date-fns/distance_in_words_to_now';
 
 class EventActivityItem extends Component {
@@ -9,21 +10,25 @@ class EventActivityItem extends Component {
       case 'newEvent':
         return (
           <div>
-            New Event!{' '}
-            <Feed.User as={Link} to={{ pathname: '/profile/' + activity.hostUid }}>
-              {activity.hostedBy}
-            </Feed.User>{' '}
-            is hosting <Link to={{ pathname: '/event/' + activity.eventId }}>{activity.title}</Link>
+            <Trans id="eventActivity.new">
+              New Event!{' '}
+              <Feed.User as={Link} to={{ pathname: '/profile/' + activity.hostUid }}>
+                {activity.hostedBy}
+              </Feed.User>{' '}
+              is hosting <Link to={{ pathname: '/event/' + activity.eventId }}>{activity.title}</Link>
+            </Trans>
           </div>
         );
       case 'cancelledEvent':
         return (
           <div>
-            Event Cancelled!{' '}
-            <Feed.User as={Link} to={{ pathname: '/profile/' + activity.hostUid }}>
-              {activity.hostedBy}
-            </Feed.User>{' '}
-            has cancelled <Link to={{ pathname: '/event/' + activity.eventId }}>{activity.title}</Link>
+            <Trans id="eventActivity.cancel">
+              Event Cancelled!{' '}
+              <Feed.User as={Link} to={{ pathname: '/profile/' + activity.hostUid }}>
+                {activity.hostedBy}
+              </Feed.User>{' '}
+              has cancelled <Link to={{ pathname: '/event/' + activity.eventId }}>{activity.title}</Link>
+            </Trans>
           </div>
         );
       default:

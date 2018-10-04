@@ -1,0 +1,27 @@
+{
+  "hostedBy": {
+    "defaults": "Hosted by",
+    "origin": [
+      [
+        "src/features/event/EventList/EventListItem.jsx",
+        25
+      ]
+    ]
+  },
+  "This event has been cancelled": {
+    "origin": [
+      [
+        "src/features/event/EventList/EventListItem.jsx",
+        33
+      ]
+    ]
+  },
+  "View": {
+    "origin": [
+      [
+        "src/features/event/EventList/EventListItem.jsx",
+        57
+      ]
+    ]
+  }
+}

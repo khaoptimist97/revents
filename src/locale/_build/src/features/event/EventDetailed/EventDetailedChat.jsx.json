@@ -1,0 +1,20 @@
+{
+  "eventDetail.chat": {
+    "defaults": "Chat about this event",
+    "origin": [
+      [
+        "src/features/event/EventDetailed/EventDetailedChat.jsx",
+        32
+      ]
+    ]
+  },
+  "reply": {
+    "defaults": "Reply",
+    "origin": [
+      [
+        "src/features/event/EventDetailed/EventDetailedChat.jsx",
+        52
+      ]
+    ]
+  }
+}

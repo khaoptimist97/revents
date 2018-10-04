@@ -1,0 +1,34 @@
+{
+  "Person": {
+    "origin": [
+      [
+        "src/features/event/EventDetailed/EventDetailedSidebar.jsx",
+        10
+      ]
+    ]
+  },
+  "People": {
+    "origin": [
+      [
+        "src/features/event/EventDetailed/EventDetailedSidebar.jsx",
+        10
+      ]
+    ]
+  },
+  "Going": {
+    "origin": [
+      [
+        "src/features/event/EventDetailed/EventDetailedSidebar.jsx",
+        11
+      ]
+    ]
+  },
+  "Host": {
+    "origin": [
+      [
+        "src/features/event/EventDetailed/EventDetailedSidebar.jsx",
+        20
+      ]
+    ]
+  }
+}

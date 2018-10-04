@@ -13,6 +13,8 @@ import { goingToEvent, cancelGoingToEvent } from '../../user/userActions';
 import { addEventComment } from '../eventActions';
 import { openModal } from '../../modals/modalActions';
 import { toastr } from 'react-redux-toastr';
+import { withI18n } from '@lingui/react';
+import { t } from '@lingui/macro';
 
 const mapState = (state, ownProps) => {
   let event = {};
@@ -43,11 +45,11 @@ class EventDetailedPage extends Component {
     initialLoading: true
   };
   async componentDidMount() {
-    const { firestore, match } = this.props;
+    const { firestore, match, i18n } = this.props;
     let event = await firestore.get(`events/${match.params.id}`);
     if (!event.exists) {
       this.props.history.push('/error');
-      toastr.error('Error', 'The event you are looking for is not found!');
+      toastr.error(i18n._(t`Error`), i18n._(t`The event you are looking for is not found!`));
     }
     await firestore.setListener(`events/${match.params.id}`);
     this.setState({
@@ -97,14 +99,15 @@ class EventDetailedPage extends Component {
             authenticated={authenticated}
             openModal={openModal}
             cancelGoingToEvent={cancelGoingToEvent}
+            i18n={this.props.i18n}
           />
-          <EventDetailedInfo event={event} />
+          <EventDetailedInfo event={event} i18n={this.props.i18n} />
           {authenticated && (
-            <EventDetailedChat eve ntChat={chatTree} addEventComment={addEventComment} eventId={event.id} />
+            <EventDetailedChat eventChat={chatTree} addEventComment={addEventComment} eventId={event.id} />
           )}
         </Grid.Column>
         <Grid.Column width={6}>
-          <EventDetailedSidebar attendees={attendees} />
+          <EventDetailedSidebar attendees={attendees} i18n={this.props.i18n} />
         </Grid.Column>
       </Grid>
     );
@@ -112,6 +115,7 @@ class EventDetailedPage extends Component {
 }
 
 export default compose(
+  withI18n(),
   withFirestore,
   connect(
     mapState,

@@ -1,6 +1,154 @@
 {
+  "Add Reply": {
+    "translation": "Bình luận",
+    "origin": [
+      [
+        "src/features/event/EventDetailed/EventDetailedChatForm.jsx",
+        22
+      ]
+    ]
+  },
+  "Cancel My Place": {
+    "translation": "Hủy tham dự",
+    "origin": [
+      [
+        "src/features/event/EventDetailed/EventDetailedHeader.jsx",
+        60
+      ]
+    ]
+  },
+  "Error": {
+    "translation": "Lỗi",
+    "origin": [
+      [
+        "src/features/event/EventDetailed/EventDetailedPage.jsx",
+        52
+      ]
+    ]
+  },
+  "Going": {
+    "translation": "đến tham dự",
+    "origin": [
+      [
+        "src/features/event/EventDetailed/EventDetailedSidebar.jsx",
+        11
+      ]
+    ]
+  },
+  "Hide map": {
+    "translation": "Ẩn Bản Đồ",
+    "origin": [
+      [
+        "src/features/event/EventDetailed/EventDetailedInfo.jsx",
+        64
+      ]
+    ]
+  },
+  "Host": {
+    "translation": "Người tổ chức",
+    "origin": [
+      [
+        "src/features/event/EventDetailed/EventDetailedSidebar.jsx",
+        20
+      ]
+    ]
+  },
+  "Hosted by": {
+    "translation": "Tổ chức bởi",
+    "origin": [
+      [
+        "src/features/event/EventDetailed/EventDetailedHeader.jsx",
+        46
+      ]
+    ]
+  },
+  "JOIN THIS EVENT": {
+    "translation": "THAM DỰ SỰ KIỆN",
+    "origin": [
+      [
+        "src/features/event/EventDetailed/EventDetailedHeader.jsx",
+        66
+      ]
+    ]
+  },
+  "Loading...": {
+    "translation": "Đang tải...",
+    "origin": [
+      [
+        "src/app/layout/LoadingComponent.jsx",
+        9
+      ]
+    ]
+  },
+  "Manage Event": {
+    "translation": "Quản lý sự kiện",
+    "origin": [
+      [
+        "src/features/event/EventDetailed/EventDetailedHeader.jsx",
+        79
+      ]
+    ]
+  },
+  "People": {
+    "translation": "người",
+    "origin": [
+      [
+        "src/features/event/EventDetailed/EventDetailedSidebar.jsx",
+        10
+      ]
+    ]
+  },
+  "Person": {
+    "translation": "người",
+    "origin": [
+      [
+        "src/features/event/EventDetailed/EventDetailedSidebar.jsx",
+        10
+      ]
+    ]
+  },
+  "Show map": {
+    "translation": "Bản đồ",
+    "origin": [
+      [
+        "src/features/event/EventDetailed/EventDetailedInfo.jsx",
+        64
+      ]
+    ]
+  },
+  "The event you are looking for is not found!": {
+    "translation": "Sự kiện mà bạn đang tìm hiện không tồn tại",
+    "origin": [
+      [
+        "src/features/event/EventDetailed/EventDetailedPage.jsx",
+        52
+      ]
+    ]
+  },
+  "This event has been cancelled": {
+    "translation": "Sự kiện này không còn diễn ra",
+    "origin": [
+      [
+        "src/features/event/EventDetailed/EventDetailedHeader.jsx",
+        83
+      ],
+      [
+        "src/features/event/EventList/EventListItem.jsx",
+        33
+      ]
+    ]
+  },
+  "View": {
+    "translation": "Xem chi tiết",
+    "origin": [
+      [
+        "src/features/event/EventList/EventListItem.jsx",
+        57
+      ]
+    ]
+  },
   "app.GetStarted": {
-    "translation": "Bat dau thoi nao!",
+    "translation": "Hãy bắt đầu!",
     "defaults": "Get Started",
     "origin": [
       [
@@ -10,12 +158,72 @@
     ]
   },
   "appName": {
-    "translation": "Lam bat ki dieu gi ban muon",
+    "translation": "Thực hiện những điều bạn muốn",
     "defaults": "Do whatever you want to do",
     "origin": [
       [
         "src/features/home/HomePage.jsx",
         14
+      ]
+    ]
+  },
+  "eventActivity.cancel": {
+    "translation": "Hủy sự kiện! <0>{0}</0> đã hủy <1>{1}</1>",
+    "defaults": "Event Cancelled! <0>{0}</0> has cancelled <1>{1}</1>",
+    "origin": [
+      [
+        "src/features/event/EventActivity/EventActivityItem.jsx",
+        25
+      ]
+    ]
+  },
+  "eventActivity.new": {
+    "translation": "Sự kiện mới! <0>{0}</0> đang tổ chức một sự kiện mang tên <1>{1}</1>",
+    "defaults": "New Event! <0>{0}</0> is hosting <1>{1}</1>",
+    "origin": [
+      [
+        "src/features/event/EventActivity/EventActivityItem.jsx",
+        13
+      ]
+    ]
+  },
+  "eventDetail.chat": {
+    "translation": "Thảo luận về sự kiện này",
+    "defaults": "Chat about this event",
+    "origin": [
+      [
+        "src/features/event/EventDetailed/EventDetailedChat.jsx",
+        32
+      ]
+    ]
+  },
+  "hostedBy": {
+    "translation": "Tổ chức bởi",
+    "defaults": "Hosted by",
+    "origin": [
+      [
+        "src/features/event/EventList/EventListItem.jsx",
+        25
+      ]
+    ]
+  },
+  "page.error": {
+    "translation": "Không tìm thấy trang này",
+    "defaults": "Error Not Found",
+    "origin": [
+      [
+        "src/app/layout/NotFound.jsx",
+        8
+      ]
+    ]
+  },
+  "reply": {
+    "translation": "Trả lời",
+    "defaults": "Reply",
+    "origin": [
+      [
+        "src/features/event/EventDetailed/EventDetailedChat.jsx",
+        52
       ]
     ]
   }

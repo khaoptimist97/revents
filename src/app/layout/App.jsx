@@ -6,6 +6,7 @@ import LoadingComponent from '../../app/layout/LoadingComponent';
 import { UserIsAuthenticated } from '../../features/auth/authWrapper';
 import { I18nProvider } from '@lingui/react';
 import catalogVi from '../../locale/vi/messages';
+import catalogEn from '../../locale/en/messages';
 import { setupI18n } from '@lingui/core';
 
 export const i18n = setupI18n();

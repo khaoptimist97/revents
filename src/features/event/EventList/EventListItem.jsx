@@ -4,10 +4,13 @@ import { Link } from 'react-router-dom';
 import format from 'date-fns/format';
 import EventListAttendee from './EventListAttendee';
 import { ObjectToArray } from '../../../app/common/util/helpers';
+import { Trans } from '@lingui/macro';
+import { withI18n } from '@lingui/react';
+import { t } from '@lingui/macro';
 
 class EventListItem extends Component {
   render() {
-    const { event } = this.props;
+    const { event, i18n } = this.props;
     return (
       <Segment.Group>
         <Segment>
@@ -19,10 +22,16 @@ class EventListItem extends Component {
                   {event.title}
                 </Item.Header>
                 <Item.Description>
-                  Hosted by <Link to={`/profile/${event.hostUid}`}>{event.hostedBy}</Link>
+                  <Trans id="hostedBy">Hosted by </Trans> <Link to={`/profile/${event.hostUid}`}>{event.hostedBy}</Link>
                 </Item.Description>
+
                 {event.cancelled && (
-                  <Label style={{ top: '-40px' }} ribbon="right" color="red" content="This event has been cancelled" />
+                  <Label
+                    style={{ top: '-40px' }}
+                    ribbon="right"
+                    color="red"
+                    content={i18n._(t`This event has been cancelled`)}
+                  />
                 )}
               </Item.Content>
             </Item>
@@ -44,10 +53,11 @@ class EventListItem extends Component {
         </Segment>
         <Segment clearing>
           <span>{event.description}</span>
-          <Button as={Link} to={`/event/${event.id}`} color="teal" floated="right" content="View" />
+
+          <Button as={Link} to={`/event/${event.id}`} color="teal" floated="right" content={i18n._(t`View`)} />
         </Segment>
       </Segment.Group>
     );
   }
 }
-export default EventListItem;
+export default withI18n()(EventListItem);

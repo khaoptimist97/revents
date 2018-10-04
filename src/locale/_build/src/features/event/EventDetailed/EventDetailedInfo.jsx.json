@@ -1,0 +1,18 @@
+{
+  "Hide map": {
+    "origin": [
+      [
+        "src/features/event/EventDetailed/EventDetailedInfo.jsx",
+        64
+      ]
+    ]
+  },
+  "Show map": {
+    "origin": [
+      [
+        "src/features/event/EventDetailed/EventDetailedInfo.jsx",
+        64
+      ]
+    ]
+  }
+}

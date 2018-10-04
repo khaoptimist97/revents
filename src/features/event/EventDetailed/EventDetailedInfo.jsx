@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Segment, Grid, Icon, Button } from 'semantic-ui-react';
 import EventDetailedMap from './EventDetailedMap';
 import format from 'date-fns/format';
+import { t } from '@lingui/macro';
 
 class EventDetailedInfo extends Component {
   state = {
@@ -18,7 +19,7 @@ class EventDetailedInfo extends Component {
     }));
   };
   render() {
-    const { event } = this.props;
+    const { event, i18n } = this.props;
     let eventDate;
     if (event.date) {
       eventDate = event.date.toDate();
@@ -60,7 +61,7 @@ class EventDetailedInfo extends Component {
                 onClick={this.showMapToggle}
                 color="teal"
                 size="tiny"
-                content={this.state.showMap ? 'Hide map' : 'Show map'}
+                content={this.state.showMap ? i18n._(t`Hide map`) : i18n._(t`Show map`)}
               />
             </Grid.Column>
           </Grid>

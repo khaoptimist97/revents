@@ -1,0 +1,20 @@
+{
+  "eventActivity.new": {
+    "defaults": "New Event! <0>{0}</0> is hosting <1>{1}</1>",
+    "origin": [
+      [
+        "src/features/event/EventActivity/EventActivityItem.jsx",
+        13
+      ]
+    ]
+  },
+  "eventActivity.cancel": {
+    "defaults": "Event Cancelled! <0>{0}</0> has cancelled <1>{1}</1>",
+    "origin": [
+      [
+        "src/features/event/EventActivity/EventActivityItem.jsx",
+        25
+      ]
+    ]
+  }
+}

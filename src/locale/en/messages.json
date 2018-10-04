@@ -1,4 +1,152 @@
 {
+  "Add Reply": {
+    "translation": "",
+    "origin": [
+      [
+        "src/features/event/EventDetailed/EventDetailedChatForm.jsx",
+        22
+      ]
+    ]
+  },
+  "Cancel My Place": {
+    "translation": "",
+    "origin": [
+      [
+        "src/features/event/EventDetailed/EventDetailedHeader.jsx",
+        60
+      ]
+    ]
+  },
+  "Error": {
+    "translation": "",
+    "origin": [
+      [
+        "src/features/event/EventDetailed/EventDetailedPage.jsx",
+        52
+      ]
+    ]
+  },
+  "Going": {
+    "translation": "",
+    "origin": [
+      [
+        "src/features/event/EventDetailed/EventDetailedSidebar.jsx",
+        11
+      ]
+    ]
+  },
+  "Hide map": {
+    "translation": "",
+    "origin": [
+      [
+        "src/features/event/EventDetailed/EventDetailedInfo.jsx",
+        64
+      ]
+    ]
+  },
+  "Host": {
+    "translation": "",
+    "origin": [
+      [
+        "src/features/event/EventDetailed/EventDetailedSidebar.jsx",
+        20
+      ]
+    ]
+  },
+  "Hosted by": {
+    "translation": "",
+    "origin": [
+      [
+        "src/features/event/EventDetailed/EventDetailedHeader.jsx",
+        46
+      ]
+    ]
+  },
+  "JOIN THIS EVENT": {
+    "translation": "",
+    "origin": [
+      [
+        "src/features/event/EventDetailed/EventDetailedHeader.jsx",
+        66
+      ]
+    ]
+  },
+  "Loading...": {
+    "translation": "",
+    "origin": [
+      [
+        "src/app/layout/LoadingComponent.jsx",
+        9
+      ]
+    ]
+  },
+  "Manage Event": {
+    "translation": "",
+    "origin": [
+      [
+        "src/features/event/EventDetailed/EventDetailedHeader.jsx",
+        79
+      ]
+    ]
+  },
+  "People": {
+    "translation": "",
+    "origin": [
+      [
+        "src/features/event/EventDetailed/EventDetailedSidebar.jsx",
+        10
+      ]
+    ]
+  },
+  "Person": {
+    "translation": "",
+    "origin": [
+      [
+        "src/features/event/EventDetailed/EventDetailedSidebar.jsx",
+        10
+      ]
+    ]
+  },
+  "Show map": {
+    "translation": "",
+    "origin": [
+      [
+        "src/features/event/EventDetailed/EventDetailedInfo.jsx",
+        64
+      ]
+    ]
+  },
+  "The event you are looking for is not found!": {
+    "translation": "",
+    "origin": [
+      [
+        "src/features/event/EventDetailed/EventDetailedPage.jsx",
+        52
+      ]
+    ]
+  },
+  "This event has been cancelled": {
+    "translation": "",
+    "origin": [
+      [
+        "src/features/event/EventDetailed/EventDetailedHeader.jsx",
+        83
+      ],
+      [
+        "src/features/event/EventList/EventListItem.jsx",
+        33
+      ]
+    ]
+  },
+  "View": {
+    "translation": "",
+    "origin": [
+      [
+        "src/features/event/EventList/EventListItem.jsx",
+        57
+      ]
+    ]
+  },
   "app.GetStarted": {
     "translation": "",
     "defaults": "Get Started",
@@ -16,6 +164,66 @@
       [
         "src/features/home/HomePage.jsx",
         14
+      ]
+    ]
+  },
+  "eventActivity.cancel": {
+    "translation": "",
+    "defaults": "Event Cancelled! <0>{0}</0> has cancelled <1>{1}</1>",
+    "origin": [
+      [
+        "src/features/event/EventActivity/EventActivityItem.jsx",
+        25
+      ]
+    ]
+  },
+  "eventActivity.new": {
+    "translation": "",
+    "defaults": "New Event! <0>{0}</0> is hosting <1>{1}</1>",
+    "origin": [
+      [
+        "src/features/event/EventActivity/EventActivityItem.jsx",
+        13
+      ]
+    ]
+  },
+  "eventDetail.chat": {
+    "translation": "",
+    "defaults": "Chat about this event",
+    "origin": [
+      [
+        "src/features/event/EventDetailed/EventDetailedChat.jsx",
+        32
+      ]
+    ]
+  },
+  "hostedBy": {
+    "translation": "",
+    "defaults": "Hosted by",
+    "origin": [
+      [
+        "src/features/event/EventList/EventListItem.jsx",
+        25
+      ]
+    ]
+  },
+  "page.error": {
+    "translation": "",
+    "defaults": "Error Not Found",
+    "origin": [
+      [
+        "src/app/layout/NotFound.jsx",
+        8
+      ]
+    ]
+  },
+  "reply": {
+    "translation": "",
+    "defaults": "Reply",
+    "origin": [
+      [
+        "src/features/event/EventDetailed/EventDetailedChat.jsx",
+        52
       ]
     ]
   }

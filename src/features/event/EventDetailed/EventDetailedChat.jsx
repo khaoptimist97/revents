@@ -3,6 +3,7 @@ import { Segment, Header, Comment } from 'semantic-ui-react';
 import EventDetailedChatForm from './EventDetailedChatForm';
 import { Link } from 'react-router-dom';
 import distanceInWords from 'date-fns/distance_in_words';
+import { Trans } from '@lingui/macro';
 
 class EventDetailedChat extends Component {
   state = {
@@ -27,7 +28,9 @@ class EventDetailedChat extends Component {
     return (
       <div>
         <Segment textAlign="center" attached="top" inverted color="teal" style={{ border: 'none' }}>
-          <Header>Chat about this event</Header>
+          <Header>
+            <Trans id="eventDetail.chat">Chat about this event</Trans>
+          </Header>
         </Segment>
 
         <Segment attached>
@@ -45,7 +48,9 @@ class EventDetailedChat extends Component {
                     </Comment.Metadata>
                     <Comment.Text>{comment.text}</Comment.Text>
                     <Comment.Actions>
-                      <Comment.Action onClick={this.handleOpenReplyButton(comment.id)}>Reply</Comment.Action>
+                      <Comment.Action onClick={this.handleOpenReplyButton(comment.id)}>
+                        <Trans id="reply">Reply</Trans>
+                      </Comment.Action>
                       {showReplyButton &&
                         selectedCommentId === comment.id && (
                           <EventDetailedChatForm

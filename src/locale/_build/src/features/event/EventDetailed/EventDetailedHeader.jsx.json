@@ -1,0 +1,42 @@
+{
+  "Hosted by": {
+    "origin": [
+      [
+        "src/features/event/EventDetailed/EventDetailedHeader.jsx",
+        46
+      ]
+    ]
+  },
+  "Cancel My Place": {
+    "origin": [
+      [
+        "src/features/event/EventDetailed/EventDetailedHeader.jsx",
+        60
+      ]
+    ]
+  },
+  "JOIN THIS EVENT": {
+    "origin": [
+      [
+        "src/features/event/EventDetailed/EventDetailedHeader.jsx",
+        66
+      ]
+    ]
+  },
+  "Manage Event": {
+    "origin": [
+      [
+        "src/features/event/EventDetailed/EventDetailedHeader.jsx",
+        79
+      ]
+    ]
+  },
+  "This event has been cancelled": {
+    "origin": [
+      [
+        "src/features/event/EventDetailed/EventDetailedHeader.jsx",
+        83
+      ]
+    ]
+  }
+}
