@@ -1,0 +1,14 @@
+{
+  "Login with": {
+    "origin": [
+      [
+        "src/features/auth/SocialLogin/SocialLogin.jsx",
+        16
+      ],
+      [
+        "src/features/auth/SocialLogin/SocialLogin.jsx",
+        21
+      ]
+    ]
+  }
+}

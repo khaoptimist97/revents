@@ -1,0 +1,26 @@
+{
+  "Events": {
+    "origin": [
+      [
+        "src/features/nav/NavBar/NavBar.jsx",
+        46
+      ]
+    ]
+  },
+  "People": {
+    "origin": [
+      [
+        "src/features/nav/NavBar/NavBar.jsx",
+        47
+      ]
+    ]
+  },
+  "Create Event": {
+    "origin": [
+      [
+        "src/features/nav/NavBar/NavBar.jsx",
+        50
+      ]
+    ]
+  }
+}

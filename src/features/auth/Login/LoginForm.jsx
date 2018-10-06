@@ -6,27 +6,28 @@ import TextInput from '../../../app/common/form/TextInput';
 import { login } from '../authActions';
 import SocialLogin from '../SocialLogin/SocialLogin';
 import { socialLogin } from '../authActions';
+import { t } from '@lingui/macro';
 
 const actions = {
   login,
   socialLogin
 };
-const LoginForm = ({ login, handleSubmit, error, socialLogin }) => {
+const LoginForm = ({ login, handleSubmit, error, socialLogin, i18n }) => {
   return (
     <Form size="large" onSubmit={handleSubmit(login)}>
       <Segment>
-        <Field name="email" component={TextInput} type="text" placeholder="Email Address" />
-        <Field name="password" component={TextInput} type="password" placeholder="password" />
+        <Field name="email" component={TextInput} type="text" placeholder="Email" />
+        <Field name="password" component={TextInput} type="password" placeholder={i18n._(t`Password`)} />
         {error && (
           <Label basic color="red">
             {error}
           </Label>
         )}
         <Button fluid size="large" color="teal">
-          Login
+          {i18n._(t`Login`)}
         </Button>
         <Divider horizontal>Or</Divider>
-        <SocialLogin socialLogin={socialLogin} />
+        <SocialLogin socialLogin={socialLogin} i18n={i18n} />
       </Segment>
     </Form>
   );

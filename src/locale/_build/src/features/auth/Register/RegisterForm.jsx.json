@@ -1,0 +1,26 @@
+{
+  "Known as": {
+    "origin": [
+      [
+        "src/features/auth/Register/RegisterForm.jsx",
+        25
+      ]
+    ]
+  },
+  "Password": {
+    "origin": [
+      [
+        "src/features/auth/Register/RegisterForm.jsx",
+        27
+      ]
+    ]
+  },
+  "Register": {
+    "origin": [
+      [
+        "src/features/auth/Register/RegisterForm.jsx",
+        34
+      ]
+    ]
+  }
+}

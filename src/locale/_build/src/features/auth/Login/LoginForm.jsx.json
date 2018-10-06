@@ -1,0 +1,18 @@
+{
+  "Password": {
+    "origin": [
+      [
+        "src/features/auth/Login/LoginForm.jsx",
+        20
+      ]
+    ]
+  },
+  "Login": {
+    "origin": [
+      [
+        "src/features/auth/Login/LoginForm.jsx",
+        27
+      ]
+    ]
+  }
+}

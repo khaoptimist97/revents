@@ -1,0 +1,18 @@
+{
+  "Login": {
+    "origin": [
+      [
+        "src/features/nav/Menus/SignedOutMenu.jsx",
+        9
+      ]
+    ]
+  },
+  "Register": {
+    "origin": [
+      [
+        "src/features/nav/Menus/SignedOutMenu.jsx",
+        10
+      ]
+    ]
+  }
+}

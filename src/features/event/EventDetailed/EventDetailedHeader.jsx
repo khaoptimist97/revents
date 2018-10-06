@@ -69,7 +69,7 @@ const EventDetailedHeader = ({
             {!authenticated &&
               !event.cancelled && (
                 <Button loading={loading} onClick={() => openModal('UnAuthModal')} color="teal">
-                  JOIN THIS EVENT
+                  {i18n._(t`JOIN THIS EVENT`)}
                 </Button>
               )}
           </div>

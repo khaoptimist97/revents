@@ -1,0 +1,50 @@
+{
+  "Create Event": {
+    "origin": [
+      [
+        "src/features/nav/Menus/SignedInMenu.jsx",
+        12
+      ]
+    ]
+  },
+  "My Events": {
+    "origin": [
+      [
+        "src/features/nav/Menus/SignedInMenu.jsx",
+        13
+      ]
+    ]
+  },
+  "My Network": {
+    "origin": [
+      [
+        "src/features/nav/Menus/SignedInMenu.jsx",
+        14
+      ]
+    ]
+  },
+  "My Profile": {
+    "origin": [
+      [
+        "src/features/nav/Menus/SignedInMenu.jsx",
+        15
+      ]
+    ]
+  },
+  "Settings": {
+    "origin": [
+      [
+        "src/features/nav/Menus/SignedInMenu.jsx",
+        16
+      ]
+    ]
+  },
+  "Sign out": {
+    "origin": [
+      [
+        "src/features/nav/Menus/SignedInMenu.jsx",
+        17
+      ]
+    ]
+  }
+}

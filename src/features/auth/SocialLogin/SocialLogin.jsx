@@ -1,7 +1,8 @@
 import React from 'react';
 import { Button, Icon } from 'semantic-ui-react';
+import { t } from '@lingui/macro';
 
-const SocialLogin = ({ socialLogin }) => {
+const SocialLogin = ({ socialLogin, i18n }) => {
   return (
     <div>
       <Button
@@ -10,13 +11,14 @@ const SocialLogin = ({ socialLogin }) => {
         style={{ marginBottom: '10px' }}
         fluid
         color="facebook"
+        acebook
       >
-        <Icon name="facebook" /> Login with Facebook
+        <Icon name="facebook" /> {i18n._(t`Login with`)} Facebook
       </Button>
 
       <Button onClick={() => socialLogin('google')} type="button" fluid color="google plus">
         <Icon name="google plus" />
-        Login with Google
+        {i18n._(t`Login with`)} Google
       </Button>
     </div>
   );

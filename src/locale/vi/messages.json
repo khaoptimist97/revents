@@ -1,6 +1,6 @@
 {
   "Add Reply": {
-    "translation": "Bình luận",
+    "translation": "Thêm bình luận",
     "origin": [
       [
         "src/features/event/EventDetailed/EventDetailedChatForm.jsx",
@@ -17,12 +17,34 @@
       ]
     ]
   },
+  "Create Event": {
+    "translation": "Tạo sự kiện",
+    "origin": [
+      [
+        "src/features/nav/Menus/SignedInMenu.jsx",
+        12
+      ],
+      [
+        "src/features/nav/NavBar/NavBar.jsx",
+        50
+      ]
+    ]
+  },
   "Error": {
     "translation": "Lỗi",
     "origin": [
       [
         "src/features/event/EventDetailed/EventDetailedPage.jsx",
         52
+      ]
+    ]
+  },
+  "Events": {
+    "translation": "Sự kiện",
+    "origin": [
+      [
+        "src/features/nav/NavBar/NavBar.jsx",
+        46
       ]
     ]
   },
@@ -36,7 +58,7 @@
     ]
   },
   "Hide map": {
-    "translation": "Ẩn Bản Đồ",
+    "translation": "Ẩn",
     "origin": [
       [
         "src/features/event/EventDetailed/EventDetailedInfo.jsx",
@@ -54,7 +76,7 @@
     ]
   },
   "Hosted by": {
-    "translation": "Tổ chức bởi",
+    "translation": "tổ chức bởi",
     "origin": [
       [
         "src/features/event/EventDetailed/EventDetailedHeader.jsx",
@@ -63,11 +85,24 @@
     ]
   },
   "JOIN THIS EVENT": {
-    "translation": "THAM DỰ SỰ KIỆN",
+    "translation": "THAM DỰ",
     "origin": [
       [
         "src/features/event/EventDetailed/EventDetailedHeader.jsx",
         66
+      ],
+      [
+        "src/features/event/EventDetailed/EventDetailedHeader.jsx",
+        72
+      ]
+    ]
+  },
+  "Known as": {
+    "translation": "Tên hiển thị",
+    "origin": [
+      [
+        "src/features/auth/Register/RegisterForm.jsx",
+        25
       ]
     ]
   },
@@ -80,8 +115,43 @@
       ]
     ]
   },
+  "Login": {
+    "translation": "Đăng nhập",
+    "origin": [
+      [
+        "src/features/auth/Login/LoginForm.jsx",
+        27
+      ],
+      [
+        "src/features/nav/Menus/SignedOutMenu.jsx",
+        9
+      ]
+    ]
+  },
+  "Login to Re-vents": {
+    "translation": "Đăng nhập vào Re-events",
+    "origin": [
+      [
+        "src/features/modals/LoginModal.jsx",
+        16
+      ]
+    ]
+  },
+  "Login with": {
+    "translation": "Đăng nhập với",
+    "origin": [
+      [
+        "src/features/auth/SocialLogin/SocialLogin.jsx",
+        16
+      ],
+      [
+        "src/features/auth/SocialLogin/SocialLogin.jsx",
+        21
+      ]
+    ]
+  },
   "Manage Event": {
-    "translation": "Quản lý sự kiện",
+    "translation": "Quản lý",
     "origin": [
       [
         "src/features/event/EventDetailed/EventDetailedHeader.jsx",
@@ -89,12 +159,56 @@
       ]
     ]
   },
+  "My Events": {
+    "translation": "Sự kiện của tôi",
+    "origin": [
+      [
+        "src/features/nav/Menus/SignedInMenu.jsx",
+        13
+      ]
+    ]
+  },
+  "My Network": {
+    "translation": "Mạng lưới",
+    "origin": [
+      [
+        "src/features/nav/Menus/SignedInMenu.jsx",
+        14
+      ]
+    ]
+  },
+  "My Profile": {
+    "translation": "Trang cá nhân",
+    "origin": [
+      [
+        "src/features/nav/Menus/SignedInMenu.jsx",
+        15
+      ]
+    ]
+  },
+  "Password": {
+    "translation": "Mật khẩu",
+    "origin": [
+      [
+        "src/features/auth/Login/LoginForm.jsx",
+        20
+      ],
+      [
+        "src/features/auth/Register/RegisterForm.jsx",
+        27
+      ]
+    ]
+  },
   "People": {
-    "translation": "người",
+    "translation": "Người theo dõi",
     "origin": [
       [
         "src/features/event/EventDetailed/EventDetailedSidebar.jsx",
         10
+      ],
+      [
+        "src/features/nav/NavBar/NavBar.jsx",
+        47
       ]
     ]
   },
@@ -107,6 +221,28 @@
       ]
     ]
   },
+  "Register": {
+    "translation": "Đăng Ký",
+    "origin": [
+      [
+        "src/features/auth/Register/RegisterForm.jsx",
+        34
+      ],
+      [
+        "src/features/nav/Menus/SignedOutMenu.jsx",
+        10
+      ]
+    ]
+  },
+  "Settings": {
+    "translation": "Cài đặt",
+    "origin": [
+      [
+        "src/features/nav/Menus/SignedInMenu.jsx",
+        16
+      ]
+    ]
+  },
   "Show map": {
     "translation": "Bản đồ",
     "origin": [
@@ -116,8 +252,26 @@
       ]
     ]
   },
+  "Sign Up to Re-vents!": {
+    "translation": "Đăng ký tài khoản Re-vents!",
+    "origin": [
+      [
+        "src/features/modals/RegisterModal.jsx",
+        16
+      ]
+    ]
+  },
+  "Sign out": {
+    "translation": "Đăng xuất",
+    "origin": [
+      [
+        "src/features/nav/Menus/SignedInMenu.jsx",
+        17
+      ]
+    ]
+  },
   "The event you are looking for is not found!": {
-    "translation": "Sự kiện mà bạn đang tìm hiện không tồn tại",
+    "translation": "Sự kiện này không tồn tại",
     "origin": [
       [
         "src/features/event/EventDetailed/EventDetailedPage.jsx",
@@ -148,7 +302,7 @@
     ]
   },
   "app.GetStarted": {
-    "translation": "Hãy bắt đầu!",
+    "translation": "Bắt đầu",
     "defaults": "Get Started",
     "origin": [
       [
@@ -158,7 +312,7 @@
     ]
   },
   "appName": {
-    "translation": "Thực hiện những điều bạn muốn",
+    "translation": "Hãy làm điều bạn muốn",
     "defaults": "Do whatever you want to do",
     "origin": [
       [
@@ -178,7 +332,7 @@
     ]
   },
   "eventActivity.new": {
-    "translation": "Sự kiện mới! <0>{0}</0> đang tổ chức một sự kiện mang tên <1>{1}</1>",
+    "translation": "Sự kiện mới! <0>{0}</0> đang tổ chức sự kiện mới <1>{1}</1>",
     "defaults": "New Event! <0>{0}</0> is hosting <1>{1}</1>",
     "origin": [
       [
@@ -188,7 +342,7 @@
     ]
   },
   "eventDetail.chat": {
-    "translation": "Thảo luận về sự kiện này",
+    "translation": "Trò chuyện",
     "defaults": "Chat about this event",
     "origin": [
       [
@@ -198,7 +352,7 @@
     ]
   },
   "hostedBy": {
-    "translation": "Tổ chức bởi",
+    "translation": "tổ chức bởi",
     "defaults": "Hosted by",
     "origin": [
       [
@@ -208,7 +362,7 @@
     ]
   },
   "page.error": {
-    "translation": "Không tìm thấy trang này",
+    "translation": "Không Tìm Thấy Trang",
     "defaults": "Error Not Found",
     "origin": [
       [

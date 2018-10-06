@@ -17,12 +17,34 @@
       ]
     ]
   },
+  "Create Event": {
+    "translation": "",
+    "origin": [
+      [
+        "src/features/nav/Menus/SignedInMenu.jsx",
+        12
+      ],
+      [
+        "src/features/nav/NavBar/NavBar.jsx",
+        50
+      ]
+    ]
+  },
   "Error": {
     "translation": "",
     "origin": [
       [
         "src/features/event/EventDetailed/EventDetailedPage.jsx",
         52
+      ]
+    ]
+  },
+  "Events": {
+    "translation": "",
+    "origin": [
+      [
+        "src/features/nav/NavBar/NavBar.jsx",
+        46
       ]
     ]
   },
@@ -68,6 +90,19 @@
       [
         "src/features/event/EventDetailed/EventDetailedHeader.jsx",
         66
+      ],
+      [
+        "src/features/event/EventDetailed/EventDetailedHeader.jsx",
+        72
+      ]
+    ]
+  },
+  "Known as": {
+    "translation": "",
+    "origin": [
+      [
+        "src/features/auth/Register/RegisterForm.jsx",
+        25
       ]
     ]
   },
@@ -80,6 +115,61 @@
       ]
     ]
   },
+  "Login": {
+    "translation": "",
+    "origin": [
+      [
+        "src/features/auth/Login/LoginForm.jsx",
+        27
+      ],
+      [
+        "src/features/nav/Menus/SignedOutMenu.jsx",
+        9
+      ]
+    ]
+  },
+  "Login to Re-vents": {
+    "translation": "",
+    "origin": [
+      [
+        "src/features/modals/LoginModal.jsx",
+        16
+      ]
+    ]
+  },
+  "Login with": {
+    "translation": "",
+    "origin": [
+      [
+        "src/features/auth/SocialLogin/SocialLogin.jsx",
+        16
+      ],
+      [
+        "src/features/auth/SocialLogin/SocialLogin.jsx",
+        21
+      ]
+    ]
+  },
+  "Login with Facebook": {
+    "translation": "",
+    "origin": [
+      [
+        "src/features/auth/SocialLogin/SocialLogin.jsx",
+        15
+      ]
+    ],
+    "obsolete": true
+  },
+  "Login with Google": {
+    "translation": "",
+    "origin": [
+      [
+        "src/features/auth/SocialLogin/SocialLogin.jsx",
+        20
+      ]
+    ],
+    "obsolete": true
+  },
   "Manage Event": {
     "translation": "",
     "origin": [
@@ -89,12 +179,56 @@
       ]
     ]
   },
+  "My Events": {
+    "translation": "",
+    "origin": [
+      [
+        "src/features/nav/Menus/SignedInMenu.jsx",
+        13
+      ]
+    ]
+  },
+  "My Network": {
+    "translation": "",
+    "origin": [
+      [
+        "src/features/nav/Menus/SignedInMenu.jsx",
+        14
+      ]
+    ]
+  },
+  "My Profile": {
+    "translation": "",
+    "origin": [
+      [
+        "src/features/nav/Menus/SignedInMenu.jsx",
+        15
+      ]
+    ]
+  },
+  "Password": {
+    "translation": "",
+    "origin": [
+      [
+        "src/features/auth/Login/LoginForm.jsx",
+        20
+      ],
+      [
+        "src/features/auth/Register/RegisterForm.jsx",
+        27
+      ]
+    ]
+  },
   "People": {
     "translation": "",
     "origin": [
       [
         "src/features/event/EventDetailed/EventDetailedSidebar.jsx",
         10
+      ],
+      [
+        "src/features/nav/NavBar/NavBar.jsx",
+        47
       ]
     ]
   },
@@ -107,12 +241,52 @@
       ]
     ]
   },
+  "Register": {
+    "translation": "",
+    "origin": [
+      [
+        "src/features/auth/Register/RegisterForm.jsx",
+        34
+      ],
+      [
+        "src/features/nav/Menus/SignedOutMenu.jsx",
+        10
+      ]
+    ]
+  },
+  "Settings": {
+    "translation": "",
+    "origin": [
+      [
+        "src/features/nav/Menus/SignedInMenu.jsx",
+        16
+      ]
+    ]
+  },
   "Show map": {
     "translation": "",
     "origin": [
       [
         "src/features/event/EventDetailed/EventDetailedInfo.jsx",
         64
+      ]
+    ]
+  },
+  "Sign Up to Re-vents!": {
+    "translation": "",
+    "origin": [
+      [
+        "src/features/modals/RegisterModal.jsx",
+        16
+      ]
+    ]
+  },
+  "Sign out": {
+    "translation": "",
+    "origin": [
+      [
+        "src/features/nav/Menus/SignedInMenu.jsx",
+        17
       ]
     ]
   },

@@ -20,6 +20,10 @@
       [
         "src/features/event/EventDetailed/EventDetailedHeader.jsx",
         66
+      ],
+      [
+        "src/features/event/EventDetailed/EventDetailedHeader.jsx",
+        72
       ]
     ]
   },
