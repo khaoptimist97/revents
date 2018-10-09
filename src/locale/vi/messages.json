@@ -1,4 +1,34 @@
 {
+  "About me": {
+    "translation": "Thông tin cá nhân",
+    "origin": [
+      [
+        "src/features/user/settings/AboutPage.jsx",
+        24
+      ],
+      [
+        "src/features/user/settings/AboutPage.jsx",
+        45
+      ],
+      [
+        "src/features/user/settings/SettingsNav.jsx",
+        15
+      ]
+    ]
+  },
+  "Account": {
+    "translation": "Tài khoản",
+    "origin": [
+      [
+        "src/features/user/settings/AccountPage.jsx",
+        20
+      ],
+      [
+        "src/features/user/settings/SettingsNav.jsx",
+        23
+      ]
+    ]
+  },
   "Add Reply": {
     "translation": "Thêm bình luận",
     "origin": [
@@ -8,11 +38,74 @@
       ]
     ]
   },
+  "All Photos": {
+    "translation": "Tất cả hình ảnh",
+    "origin": [
+      [
+        "src/features/user/settings/PhotosPage.jsx",
+        154
+      ]
+    ]
+  },
+  "Basics": {
+    "translation": "Thông tin cơ bản",
+    "origin": [
+      [
+        "src/features/user/settings/SettingsNav.jsx",
+        12
+      ]
+    ]
+  },
+  "Cancel": {
+    "translation": "Hủy",
+    "origin": [
+      [
+        "src/features/event/EventForm/EventForm.jsx",
+        202
+      ]
+    ]
+  },
+  "Cancel Event": {
+    "translation": "Hủy Sự kiện",
+    "origin": [
+      [
+        "src/features/event/EventForm/EventForm.jsx",
+        210
+      ]
+    ]
+  },
   "Cancel My Place": {
     "translation": "Hủy tham dự",
     "origin": [
       [
         "src/features/event/EventDetailed/EventDetailedHeader.jsx",
+        60
+      ]
+    ]
+  },
+  "Change password": {
+    "translation": "Thay đổi mật khẩu",
+    "origin": [
+      [
+        "src/features/user/settings/AccountPage.jsx",
+        24
+      ]
+    ]
+  },
+  "Confirm Password": {
+    "translation": "Nhập lại mật khẩu",
+    "origin": [
+      [
+        "src/features/user/settings/AccountPage.jsx",
+        47
+      ]
+    ]
+  },
+  "Country of Origin": {
+    "translation": "Quốc Tịch",
+    "origin": [
+      [
+        "src/features/user/settings/AboutPage.jsx",
         60
       ]
     ]
@@ -30,6 +123,24 @@
       ]
     ]
   },
+  "Date of Birth": {
+    "translation": "Ngày sinh",
+    "origin": [
+      [
+        "src/features/user/settings/BasicPage.jsx",
+        28
+      ]
+    ]
+  },
+  "Drop image here or click to add": {
+    "translation": "Kéo thả ảnh vào đây hoặc click thêm",
+    "origin": [
+      [
+        "src/features/user/settings/PhotosPage.jsx",
+        109
+      ]
+    ]
+  },
   "Error": {
     "translation": "Lỗi",
     "origin": [
@@ -39,12 +150,84 @@
       ]
     ]
   },
+  "Event City": {
+    "translation": "Thành Phố",
+    "origin": [
+      [
+        "src/features/event/EventForm/EventForm.jsx",
+        170
+      ]
+    ]
+  },
+  "Event Date": {
+    "translation": "Ngày diễn ra",
+    "origin": [
+      [
+        "src/features/event/EventForm/EventForm.jsx",
+        193
+      ]
+    ]
+  },
+  "Event Details": {
+    "translation": "Thông tin chi tiết Sự kiện",
+    "origin": [
+      [
+        "src/features/event/EventForm/EventForm.jsx",
+        147
+      ]
+    ]
+  },
+  "Event Location Details": {
+    "translation": "Chi Tiết Về Nơi Diễn Ra Sự Kiện",
+    "origin": [
+      [
+        "src/features/event/EventForm/EventForm.jsx",
+        164
+      ]
+    ]
+  },
+  "Event Venue": {
+    "translation": "Địa điểm",
+    "origin": [
+      [
+        "src/features/event/EventForm/EventForm.jsx",
+        185
+      ]
+    ]
+  },
   "Events": {
     "translation": "Sự kiện",
     "origin": [
       [
         "src/features/nav/NavBar/NavBar.jsx",
         46
+      ]
+    ]
+  },
+  "Facebook Account": {
+    "translation": "Tài khoản Facebook",
+    "origin": [
+      [
+        "src/features/user/settings/AccountPage.jsx",
+        62
+      ]
+    ]
+  },
+  "FeMale": {
+    "translation": "Nữ",
+    "origin": [
+      [
+        "src/features/user/settings/BasicPage.jsx",
+        22
+      ]
+    ]
+  },
+  "Give your event a name": {
+    "translation": "Tên sự kiện",
+    "origin": [
+      [
+        "src/features/event/EventForm/EventForm.jsx",
+        149
       ]
     ]
   },
@@ -63,6 +246,15 @@
       [
         "src/features/event/EventDetailed/EventDetailedInfo.jsx",
         64
+      ]
+    ]
+  },
+  "Home Town": {
+    "translation": "Quê Quán",
+    "origin": [
+      [
+        "src/features/user/settings/BasicPage.jsx",
+        37
       ]
     ]
   },
@@ -150,12 +342,57 @@
       ]
     ]
   },
+  "Main": {
+    "translation": "Đại diện",
+    "origin": [
+      [
+        "src/features/user/settings/PhotosPage.jsx",
+        167
+      ]
+    ]
+  },
+  "Main Photo": {
+    "translation": "Ảnh đại diện",
+    "origin": [
+      [
+        "src/features/user/settings/PhotosPage.jsx",
+        159
+      ]
+    ]
+  },
+  "Male": {
+    "translation": "Nam",
+    "origin": [
+      [
+        "src/features/user/settings/BasicPage.jsx",
+        21
+      ]
+    ]
+  },
   "Manage Event": {
     "translation": "Quản lý",
     "origin": [
       [
         "src/features/event/EventDetailed/EventDetailedHeader.jsx",
         79
+      ]
+    ]
+  },
+  "Married": {
+    "translation": "Đã kết hôn",
+    "origin": [
+      [
+        "src/features/user/settings/AboutPage.jsx",
+        39
+      ]
+    ]
+  },
+  "My Account": {
+    "translation": "Tài khoản của tôi",
+    "origin": [
+      [
+        "src/features/user/settings/SettingsNav.jsx",
+        25
       ]
     ]
   },
@@ -177,12 +414,39 @@
       ]
     ]
   },
+  "My Photos": {
+    "translation": "Ảnh của tôi",
+    "origin": [
+      [
+        "src/features/user/settings/SettingsNav.jsx",
+        18
+      ]
+    ]
+  },
   "My Profile": {
     "translation": "Trang cá nhân",
     "origin": [
       [
         "src/features/nav/Menus/SignedInMenu.jsx",
         15
+      ]
+    ]
+  },
+  "New Password": {
+    "translation": "Mật khẩu mới",
+    "origin": [
+      [
+        "src/features/user/settings/AccountPage.jsx",
+        37
+      ]
+    ]
+  },
+  "Occupation": {
+    "translation": "Nghề nghiệp",
+    "origin": [
+      [
+        "src/features/user/settings/AboutPage.jsx",
+        54
       ]
     ]
   },
@@ -212,12 +476,48 @@
       ]
     ]
   },
+  "People I'm following": {
+    "translation": "Đang theo dõi",
+    "origin": [
+      [
+        "src/features/user/PeopleDashboard/PeopleDashboard.jsx",
+        44
+      ]
+    ]
+  },
+  "People following me": {
+    "translation": "Người theo dõi",
+    "origin": [
+      [
+        "src/features/user/PeopleDashboard/PeopleDashboard.jsx",
+        38
+      ]
+    ]
+  },
   "Person": {
     "translation": "người",
     "origin": [
       [
         "src/features/event/EventDetailed/EventDetailedSidebar.jsx",
         10
+      ]
+    ]
+  },
+  "Profile": {
+    "translation": "Trang cá nhân",
+    "origin": [
+      [
+        "src/features/user/settings/SettingsNav.jsx",
+        10
+      ]
+    ]
+  },
+  "Reactivate Event": {
+    "translation": "Tổ chức lại sự kiện",
+    "origin": [
+      [
+        "src/features/event/EventForm/EventForm.jsx",
+        210
       ]
     ]
   },
@@ -231,6 +531,24 @@
       [
         "src/features/nav/Menus/SignedOutMenu.jsx",
         10
+      ]
+    ]
+  },
+  "Relationship": {
+    "translation": "Phức tạp",
+    "origin": [
+      [
+        "src/features/user/settings/AboutPage.jsx",
+        37
+      ]
+    ]
+  },
+  "Select your interests": {
+    "translation": "Lựa chọn sở thích",
+    "origin": [
+      [
+        "src/features/user/settings/AboutPage.jsx",
+        52
       ]
     ]
   },
@@ -270,6 +588,60 @@
       ]
     ]
   },
+  "Single": {
+    "translation": "Độc thân",
+    "origin": [
+      [
+        "src/features/user/settings/AboutPage.jsx",
+        31
+      ]
+    ]
+  },
+  "Step 1 - Add Photo": {
+    "translation": "Bước 1 - Thêm ảnh",
+    "origin": [
+      [
+        "src/features/user/settings/PhotosPage.jsx",
+        105
+      ]
+    ]
+  },
+  "Step 2 - Resize image": {
+    "translation": "Bước 2 - Tùy chỉnh kích thước",
+    "origin": [
+      [
+        "src/features/user/settings/PhotosPage.jsx",
+        115
+      ]
+    ]
+  },
+  "Step 3 - Preview and Upload": {
+    "translation": "Bước 3 - Xem trước và Tải lên",
+    "origin": [
+      [
+        "src/features/user/settings/PhotosPage.jsx",
+        134
+      ]
+    ]
+  },
+  "Submit": {
+    "translation": "Tạo",
+    "origin": [
+      [
+        "src/features/event/EventForm/EventForm.jsx",
+        199
+      ]
+    ]
+  },
+  "Tell us about your event": {
+    "translation": "Mô tả chi tiết",
+    "origin": [
+      [
+        "src/features/event/EventForm/EventForm.jsx",
+        162
+      ]
+    ]
+  },
   "The event you are looking for is not found!": {
     "translation": "Sự kiện này không tồn tại",
     "origin": [
@@ -292,12 +664,122 @@
       ]
     ]
   },
+  "Update Password": {
+    "translation": "Cập nhật mật khẩu",
+    "origin": [
+      [
+        "src/features/user/settings/AccountPage.jsx",
+        55
+      ]
+    ]
+  },
+  "Update Profile": {
+    "translation": "Cập nhật thông tin cá nhân",
+    "origin": [
+      [
+        "src/features/user/settings/AboutPage.jsx",
+        63
+      ],
+      [
+        "src/features/user/settings/BasicPage.jsx",
+        44
+      ]
+    ]
+  },
   "View": {
     "translation": "Xem chi tiết",
     "origin": [
       [
         "src/features/event/EventList/EventListItem.jsx",
         57
+      ]
+    ]
+  },
+  "What is your event about": {
+    "translation": "Loại sự kiện",
+    "origin": [
+      [
+        "src/features/event/EventForm/EventForm.jsx",
+        155
+      ]
+    ]
+  },
+  "Your Photos": {
+    "translation": "Ảnh của bạn",
+    "origin": [
+      [
+        "src/features/user/settings/PhotosPage.jsx",
+        101
+      ]
+    ]
+  },
+  "about.completePro": {
+    "translation": "Hoàn tất thông tin cá nhân",
+    "defaults": "Complete your profile to get the most out of this site",
+    "origin": [
+      [
+        "src/features/user/settings/AboutPage.jsx",
+        26
+      ]
+    ]
+  },
+  "about.tellYours": {
+    "translation": "Hãy cho chúng tôi biết thêm về bạn",
+    "defaults": "Tell us about yourself",
+    "origin": [
+      [
+        "src/features/user/settings/AboutPage.jsx",
+        43
+      ]
+    ]
+  },
+  "account.facebook": {
+    "translation": "Vui lòng truy cập vào Facebook của bạn để cập nhật thông tin tài khoản",
+    "defaults": "Please visit Facebook to update your account settings",
+    "origin": [
+      [
+        "src/features/user/settings/AccountPage.jsx",
+        64
+      ]
+    ]
+  },
+  "account.goFB": {
+    "translation": "Đi đến Facebook",
+    "defaults": "Go to Facebook",
+    "origin": [
+      [
+        "src/features/user/settings/AccountPage.jsx",
+        68
+      ]
+    ]
+  },
+  "account.goGG": {
+    "translation": "Đi đến Google",
+    "defaults": "Go to Google",
+    "origin": [
+      [
+        "src/features/user/settings/AccountPage.jsx",
+        81
+      ]
+    ]
+  },
+  "account.google": {
+    "translation": "Vui lòng truy cập vào Google của bạn để cập nhật thông tin tài khoản",
+    "defaults": "Please visit Google to update your account settings",
+    "origin": [
+      [
+        "src/features/user/settings/AccountPage.jsx",
+        77
+      ]
+    ]
+  },
+  "account.userForm": {
+    "translation": "Sử dụng biểu mẫu này để cập nhật thông tin tài khoản",
+    "defaults": "Use this form to update your account settings",
+    "origin": [
+      [
+        "src/features/user/settings/AccountPage.jsx",
+        26
       ]
     ]
   },

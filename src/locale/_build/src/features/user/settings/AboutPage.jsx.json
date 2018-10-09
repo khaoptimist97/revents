@@ -1,0 +1,88 @@
+{
+  "About me": {
+    "origin": [
+      [
+        "src/features/user/settings/AboutPage.jsx",
+        24
+      ],
+      [
+        "src/features/user/settings/AboutPage.jsx",
+        45
+      ]
+    ]
+  },
+  "about.completePro": {
+    "defaults": "Complete your profile to get the most out of this site",
+    "origin": [
+      [
+        "src/features/user/settings/AboutPage.jsx",
+        26
+      ]
+    ]
+  },
+  "Single": {
+    "origin": [
+      [
+        "src/features/user/settings/AboutPage.jsx",
+        31
+      ]
+    ]
+  },
+  "Relationship": {
+    "origin": [
+      [
+        "src/features/user/settings/AboutPage.jsx",
+        37
+      ]
+    ]
+  },
+  "Married": {
+    "origin": [
+      [
+        "src/features/user/settings/AboutPage.jsx",
+        39
+      ]
+    ]
+  },
+  "about.tellYours": {
+    "defaults": "Tell us about yourself",
+    "origin": [
+      [
+        "src/features/user/settings/AboutPage.jsx",
+        43
+      ]
+    ]
+  },
+  "Select your interests": {
+    "origin": [
+      [
+        "src/features/user/settings/AboutPage.jsx",
+        52
+      ]
+    ]
+  },
+  "Occupation": {
+    "origin": [
+      [
+        "src/features/user/settings/AboutPage.jsx",
+        54
+      ]
+    ]
+  },
+  "Country of Origin": {
+    "origin": [
+      [
+        "src/features/user/settings/AboutPage.jsx",
+        60
+      ]
+    ]
+  },
+  "Update Profile": {
+    "origin": [
+      [
+        "src/features/user/settings/AboutPage.jsx",
+        63
+      ]
+    ]
+  }
+}

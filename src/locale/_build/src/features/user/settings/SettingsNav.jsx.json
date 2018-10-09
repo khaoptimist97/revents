@@ -1,0 +1,50 @@
+{
+  "Profile": {
+    "origin": [
+      [
+        "src/features/user/settings/SettingsNav.jsx",
+        10
+      ]
+    ]
+  },
+  "Basics": {
+    "origin": [
+      [
+        "src/features/user/settings/SettingsNav.jsx",
+        12
+      ]
+    ]
+  },
+  "About me": {
+    "origin": [
+      [
+        "src/features/user/settings/SettingsNav.jsx",
+        15
+      ]
+    ]
+  },
+  "My Photos": {
+    "origin": [
+      [
+        "src/features/user/settings/SettingsNav.jsx",
+        18
+      ]
+    ]
+  },
+  "Account": {
+    "origin": [
+      [
+        "src/features/user/settings/SettingsNav.jsx",
+        23
+      ]
+    ]
+  },
+  "My Account": {
+    "origin": [
+      [
+        "src/features/user/settings/SettingsNav.jsx",
+        25
+      ]
+    ]
+  }
+}

@@ -3,6 +3,8 @@ import { Segment, Header, Form, Divider, Label, Button, Icon } from 'semantic-ui
 import { Field, reduxForm } from 'redux-form';
 import TextInput from '../../../app/common/form/TextInput';
 import { combineValidators, isRequired, matchesField, composeValidators } from 'revalidate';
+import { t } from '@lingui/macro';
+import { Trans } from '@lingui/macro';
 
 const validate = combineValidators({
   newPassword1: isRequired({ message: 'Please enter a password' }),
@@ -12,15 +14,17 @@ const validate = combineValidators({
   )()
 });
 
-const AccountPage = ({ error, invalid, submitting, handleSubmit, updatePassword, providerId }) => {
+const AccountPage = ({ error, invalid, submitting, handleSubmit, updatePassword, providerId, i18n }) => {
   return (
     <Segment>
-      <Header dividing size="large" content="Account" />
+      <Header dividing size="large" content={i18n._(t`Account`)} />
       {providerId &&
         providerId === 'password' && (
           <div>
-            <Header color="teal" sub content="Change password" />
-            <p>Use this form to update your account settings</p>
+            <Header color="teal" sub content={i18n._(t`Change password`)} />
+            <p>
+              <Trans id="account.userForm">Use this form to update your account settings</Trans>
+            </p>
             <Form onSubmit={handleSubmit(updatePassword)}>
               <Field
                 width={8}
@@ -30,7 +34,7 @@ const AccountPage = ({ error, invalid, submitting, handleSubmit, updatePassword,
                 inline={true}
                 component={TextInput}
                 basic={true}
-                placeholder="New Password"
+                placeholder={i18n._(t`New Password`)}
               />
               <Field
                 width={8}
@@ -40,7 +44,7 @@ const AccountPage = ({ error, invalid, submitting, handleSubmit, updatePassword,
                 basic={true}
                 pointing="left"
                 component={TextInput}
-                placeholder="Confirm Password"
+                placeholder={i18n._(t`Confirm Password`)}
               />
               {error && (
                 <Label basic color="red">
@@ -48,18 +52,20 @@ const AccountPage = ({ error, invalid, submitting, handleSubmit, updatePassword,
                 </Label>
               )}
               <Divider />
-              <Button disabled={invalid || submitting} size="large" positive content="Update Password" />
+              <Button disabled={invalid || submitting} size="large" positive content={i18n._(t`Update Password`)} />
             </Form>
           </div>
         )}
       {providerId &&
         providerId === 'facebook.com' && (
           <div>
-            <Header color="teal" sub content="Facebook Account" />
-            <p>Please visit Facebook to update your account settings</p>
+            <Header color="teal" sub content={i18n._(t`Facebook Account`)} />
+            <p>
+              <Trans id="account.facebook">Please visit Facebook to update your account settings</Trans>
+            </p>
             <Button type="button" color="facebook">
               <Icon name="facebook" />
-              Go to Facebook
+              <Trans id="account.goFB">Go to Facebook</Trans>
             </Button>
           </div>
         )}
@@ -67,10 +73,12 @@ const AccountPage = ({ error, invalid, submitting, handleSubmit, updatePassword,
         providerId === 'google.com' && (
           <div>
             <Header color="teal" sub content="Google Account" />
-            <p>Please visit Google to update your account settings</p>
+            <p>
+              <Trans id="account.google">Please visit Google to update your account settings</Trans>
+            </p>
             <Button type="button" color="google plus">
               <Icon name="google plus" />
-              Go to Google
+              <Trans id="account.goGG">Go to Google</Trans>
             </Button>
           </div>
         )}

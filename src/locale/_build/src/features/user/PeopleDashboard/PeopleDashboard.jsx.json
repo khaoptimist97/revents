@@ -1,0 +1,18 @@
+{
+  "People following me": {
+    "origin": [
+      [
+        "src/features/user/PeopleDashboard/PeopleDashboard.jsx",
+        38
+      ]
+    ]
+  },
+  "People I'm following": {
+    "origin": [
+      [
+        "src/features/user/PeopleDashboard/PeopleDashboard.jsx",
+        44
+      ]
+    ]
+  }
+}

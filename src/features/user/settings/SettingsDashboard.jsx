@@ -9,6 +9,7 @@ import PhotosPage from './PhotosPage';
 import AccountPage from './AccountPage';
 import { updatePassword } from '../../auth/authActions';
 import { updateProfile } from '../userActions';
+import { withI18n } from '@lingui/react';
 
 const actions = {
   updatePassword,
@@ -20,7 +21,7 @@ const mapState = state => ({
   user: state.firebase.profile
 });
 
-const SettingsDashboard = ({ updatePassword, providerId, user, updateProfile }) => {
+const SettingsDashboard = ({ updatePassword, providerId, user, updateProfile, i18n }) => {
   return (
     <Grid>
       <Grid.Column width={12}>
@@ -28,27 +29,29 @@ const SettingsDashboard = ({ updatePassword, providerId, user, updateProfile }) 
           <Redirect exact from="/settings" to="/settings/basic" />
           <Route
             path="/settings/basic"
-            render={() => <BasicPage initialValues={user} updateProfile={updateProfile} />}
+            render={() => <BasicPage initialValues={user} updateProfile={updateProfile} i18n={i18n} />}
           />
           <Route
             path="/settings/about"
-            render={() => <AboutPage initialValues={user} updateProfile={updateProfile} />}
+            render={() => <AboutPage initialValues={user} updateProfile={updateProfile} i18n={i18n} />}
           />
-          <Route path="/settings/photos" component={PhotosPage} />
+          <Route path="/settings/photos" render={() => <PhotosPage i18n={i18n} />} />
           <Route
             path="/settings/account"
-            render={() => <AccountPage updatePassword={updatePassword} providerId={providerId} />}
+            render={() => <AccountPage updatePassword={updatePassword} providerId={providerId} i18n={i18n} />}
           />
         </Switch>
       </Grid.Column>
       <Grid.Column width={4}>
-        <SettingsNav />
+        <SettingsNav i18n={i18n} />
       </Grid.Column>
     </Grid>
   );
 };
 
-export default connect(
-  mapState,
-  actions
-)(SettingsDashboard);
+export default withI18n()(
+  connect(
+    mapState,
+    actions
+  )(SettingsDashboard)
+);

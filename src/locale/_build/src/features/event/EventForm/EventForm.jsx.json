@@ -1,0 +1,98 @@
+{
+  "Event Details": {
+    "origin": [
+      [
+        "src/features/event/EventForm/EventForm.jsx",
+        147
+      ]
+    ]
+  },
+  "Give your event a name": {
+    "origin": [
+      [
+        "src/features/event/EventForm/EventForm.jsx",
+        149
+      ]
+    ]
+  },
+  "What is your event about": {
+    "origin": [
+      [
+        "src/features/event/EventForm/EventForm.jsx",
+        155
+      ]
+    ]
+  },
+  "Tell us about your event": {
+    "origin": [
+      [
+        "src/features/event/EventForm/EventForm.jsx",
+        162
+      ]
+    ]
+  },
+  "Event Location Details": {
+    "origin": [
+      [
+        "src/features/event/EventForm/EventForm.jsx",
+        164
+      ]
+    ]
+  },
+  "Event City": {
+    "origin": [
+      [
+        "src/features/event/EventForm/EventForm.jsx",
+        170
+      ]
+    ]
+  },
+  "Event Venue": {
+    "origin": [
+      [
+        "src/features/event/EventForm/EventForm.jsx",
+        185
+      ]
+    ]
+  },
+  "Event Date": {
+    "origin": [
+      [
+        "src/features/event/EventForm/EventForm.jsx",
+        193
+      ]
+    ]
+  },
+  "Submit": {
+    "origin": [
+      [
+        "src/features/event/EventForm/EventForm.jsx",
+        199
+      ]
+    ]
+  },
+  "Cancel": {
+    "origin": [
+      [
+        "src/features/event/EventForm/EventForm.jsx",
+        202
+      ]
+    ]
+  },
+  "Reactivate Event": {
+    "origin": [
+      [
+        "src/features/event/EventForm/EventForm.jsx",
+        210
+      ]
+    ]
+  },
+  "Cancel Event": {
+    "origin": [
+      [
+        "src/features/event/EventForm/EventForm.jsx",
+        210
+      ]
+    ]
+  }
+}

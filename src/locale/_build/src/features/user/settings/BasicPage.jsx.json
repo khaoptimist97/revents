@@ -1,0 +1,42 @@
+{
+  "Male": {
+    "origin": [
+      [
+        "src/features/user/settings/BasicPage.jsx",
+        21
+      ]
+    ]
+  },
+  "FeMale": {
+    "origin": [
+      [
+        "src/features/user/settings/BasicPage.jsx",
+        22
+      ]
+    ]
+  },
+  "Date of Birth": {
+    "origin": [
+      [
+        "src/features/user/settings/BasicPage.jsx",
+        28
+      ]
+    ]
+  },
+  "Home Town": {
+    "origin": [
+      [
+        "src/features/user/settings/BasicPage.jsx",
+        37
+      ]
+    ]
+  },
+  "Update Profile": {
+    "origin": [
+      [
+        "src/features/user/settings/BasicPage.jsx",
+        44
+      ]
+    ]
+  }
+}

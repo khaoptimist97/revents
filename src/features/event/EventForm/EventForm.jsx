@@ -14,6 +14,8 @@ import TextArea from '../../../app/common/form/TextArea';
 import SelectInput from '../../../app/common/form/SelectInput';
 import DateInput from '../../../app/common/form/DateInput';
 import PlaceInput from '../../../app/common/form/PlaceInput';
+import { withI18n } from '@lingui/react';
+import { t } from '@lingui/macro';
 
 const mapState = state => {
   let event = {};
@@ -133,7 +135,7 @@ class EventForm extends Component {
   };
 
   render() {
-    const { loading, invalid, submitting, pristine, event, cancelToggle } = this.props;
+    const { loading, invalid, submitting, pristine, event, cancelToggle, i18n } = this.props;
     return (
       <Grid>
         <Script
@@ -142,30 +144,30 @@ class EventForm extends Component {
         />
         <Grid.Column width={10}>
           <Segment>
-            <Header sub color="teal" content="Event Details" />
+            <Header sub color="teal" content={i18n._(t`Event Details`)} />
             <Form onSubmit={this.props.handleSubmit(this.onFormSubmit)}>
-              <Field name="title" type="text" component={TextInput} placeholder="Give your event a name" />
+              <Field name="title" type="text" component={TextInput} placeholder={i18n._(t`Give your event a name`)} />
               <Field
                 name="category"
                 type="text"
                 options={category}
                 component={SelectInput}
-                placeholder="What is your event about"
+                placeholder={i18n._(t`What is your event about`)}
               />
               <Field
                 name="description"
                 type="text"
                 rows={3}
                 component={TextArea}
-                placeholder="Tell us about your event"
+                placeholder={i18n._(t`Tell us about your event`)}
               />
-              <Header sub color="teal" content="Event Location Details" />
+              <Header sub color="teal" content={i18n._(t`Event Location Details`)} />
               {this.state.scriptLoaded && (
                 <Field
                   name="city"
                   type="text"
                   component={PlaceInput}
-                  placeholder="Event City"
+                  placeholder={i18n._(t`Event City`)}
                   options={{ types: ['(cities)'] }}
                   onSelect={this.handleCitySelect}
                 />
@@ -180,7 +182,7 @@ class EventForm extends Component {
                     types: ['establishment']
                   }}
                   component={PlaceInput}
-                  placeholder="Event Venue"
+                  placeholder={i18n._(t`Event Venue`)}
                   onSelect={this.handleVenueSelect}
                 />
               )}
@@ -188,16 +190,16 @@ class EventForm extends Component {
                 name="date"
                 type="text"
                 component={DateInput}
-                placeholder="Event Date"
+                placeholder={i18n._(t`Event Date`)}
                 dateFormat="YYYY-MM-DD HH:mm"
                 time="HH:mm"
                 showTimeSelect
               />
               <Button loading={loading} disabled={invalid || submitting || pristine} positive type="submit">
-                Submit
+                {i18n._(t`Submit`)}
               </Button>
               <Button disabled={loading} onClick={this.props.history.goBack} type="button">
-                Cancel
+                {i18n._(t`Cancel`)}
               </Button>
               {event.id && (
                 <Button
@@ -205,7 +207,7 @@ class EventForm extends Component {
                   type="button"
                   color={event.cancelled ? 'green' : 'red'}
                   floated="right"
-                  content={event.cancelled ? 'Reactivate Event' : 'Cancel Event'}
+                  content={event.cancelled ? i18n._(t`Reactivate Event`) : i18n._(t`Cancel Event`)}
                 />
               )}
             </Form>
@@ -215,9 +217,11 @@ class EventForm extends Component {
     );
   }
 }
-export default withFirestore(
-  connect(
-    mapState,
-    actions
-  )(reduxForm({ form: 'eventForm', enableReinitialize: true, validate })(EventForm))
+export default withI18n()(
+  withFirestore(
+    connect(
+      mapState,
+      actions
+    )(reduxForm({ form: 'eventForm', enableReinitialize: true, validate })(EventForm))
+  )
 );

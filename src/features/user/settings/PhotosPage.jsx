@@ -8,6 +8,7 @@ import { connect } from 'react-redux';
 import { toastr } from 'react-redux-toastr';
 import { firestoreConnect } from 'react-redux-firebase';
 import { compose } from 'redux';
+import { t } from '@lingui/macro';
 
 const mapState = state => ({
   auth: state.firebase.auth,
@@ -87,7 +88,7 @@ class PhotosPage extends Component {
     });
   };
   render() {
-    const { photos, profile, loading } = this.props;
+    const { photos, profile, loading, i18n } = this.props;
     let filteredPhotos;
     if (photos) {
       filteredPhotos = photos.filter(photo => {
@@ -97,21 +98,21 @@ class PhotosPage extends Component {
 
     return (
       <Segment>
-        <Header dividing size="large" content="Your Photos" />
+        <Header dividing size="large" content={i18n._(t`Your Photos`)} />
         <Grid>
           <Grid.Row />
           <Grid.Column width={4}>
-            <Header color="teal" sub content="Step 1 - Add Photo" />
+            <Header color="teal" sub content={i18n._(t`Step 1 - Add Photo`)} />
             <Dropzone onDrop={this.onDrop} multiple={false}>
               <div style={{ paddingTop: '30px', textAlign: 'center' }}>
                 <Icon name="upload" size="huge" />
-                <Header content="Drop image here or click to add" />
+                <Header content={i18n._(t`Drop image here or click to add`)} />
               </div>
             </Dropzone>
           </Grid.Column>
           <Grid.Column width={1} />
           <Grid.Column width={4}>
-            <Header sub color="teal" content="Step 2 - Resize image" />
+            <Header sub color="teal" content={i18n._(t`Step 2 - Resize image`)} />
             {this.state.files[0] && (
               <Cropper
                 style={{ height: 200, width: '100%' }}
@@ -130,7 +131,7 @@ class PhotosPage extends Component {
           </Grid.Column>
           <Grid.Column width={1} />
           <Grid.Column width={4}>
-            <Header sub color="teal" content="Step 3 - Preview and Upload" />
+            <Header sub color="teal" content={i18n._(t`Step 3 - Preview and Upload`)} />
             {this.state.files[0] && (
               <div>
                 <Image style={{ minHeight: '200xp', minWidth: '200px' }} src={this.state.cropResult} />
@@ -150,12 +151,12 @@ class PhotosPage extends Component {
         </Grid>
 
         <Divider />
-        <Header sub color="teal" content="All Photos" />
+        <Header sub color="teal" content={i18n._(t`All Photos`)} />
 
         <Card.Group itemsPerRow={5}>
           <Card>
             <Image src={profile.photoURL || '/assets/user.png'} />
-            <Button positive>Main Photo</Button>
+            <Button positive>{i18n._(t`Main Photo`)}</Button>
           </Card>
           {photos &&
             filteredPhotos.map(photo => (
@@ -163,7 +164,7 @@ class PhotosPage extends Component {
                 <Image src={photo.url} />
                 <div className="ui two buttons">
                   <Button loading={loading} onClick={this.handleSetMainPhoto(photo)} basic color="green">
-                    Main
+                    {i18n._(t`Main`)}
                   </Button>
                   <Button onClick={this.handleDelete(photo)} basic icon="trash" color="red" />
                 </div>

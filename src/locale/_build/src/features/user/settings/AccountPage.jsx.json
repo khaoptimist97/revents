@@ -1,0 +1,95 @@
+{
+  "Account": {
+    "origin": [
+      [
+        "src/features/user/settings/AccountPage.jsx",
+        20
+      ]
+    ]
+  },
+  "Change password": {
+    "origin": [
+      [
+        "src/features/user/settings/AccountPage.jsx",
+        24
+      ]
+    ]
+  },
+  "account.userForm": {
+    "defaults": "Use this form to update your account settings",
+    "origin": [
+      [
+        "src/features/user/settings/AccountPage.jsx",
+        26
+      ]
+    ]
+  },
+  "New Password": {
+    "origin": [
+      [
+        "src/features/user/settings/AccountPage.jsx",
+        37
+      ]
+    ]
+  },
+  "Confirm Password": {
+    "origin": [
+      [
+        "src/features/user/settings/AccountPage.jsx",
+        47
+      ]
+    ]
+  },
+  "Update Password": {
+    "origin": [
+      [
+        "src/features/user/settings/AccountPage.jsx",
+        55
+      ]
+    ]
+  },
+  "Facebook Account": {
+    "origin": [
+      [
+        "src/features/user/settings/AccountPage.jsx",
+        62
+      ]
+    ]
+  },
+  "account.facebook": {
+    "defaults": "Please visit Facebook to update your account settings",
+    "origin": [
+      [
+        "src/features/user/settings/AccountPage.jsx",
+        64
+      ]
+    ]
+  },
+  "account.goFB": {
+    "defaults": "Go to Facebook",
+    "origin": [
+      [
+        "src/features/user/settings/AccountPage.jsx",
+        68
+      ]
+    ]
+  },
+  "account.google": {
+    "defaults": "Please visit Google to update your account settings",
+    "origin": [
+      [
+        "src/features/user/settings/AccountPage.jsx",
+        77
+      ]
+    ]
+  },
+  "account.goGG": {
+    "defaults": "Go to Google",
+    "origin": [
+      [
+        "src/features/user/settings/AccountPage.jsx",
+        81
+      ]
+    ]
+  }
+}

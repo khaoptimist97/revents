@@ -4,6 +4,8 @@ import PeopleCard from './PeopleCard';
 import { connect } from 'react-redux';
 import { compose } from 'redux';
 import { firestoreConnect } from 'react-redux-firebase';
+import { withI18n } from '@lingui/react';
+import { t } from '@lingui/macro';
 
 const query = ({ auth }) => {
   return [
@@ -28,18 +30,18 @@ const mapState = state => {
     auth: state.firebase.auth
   };
 };
-const PeopleDashboard = ({ followings }, { followers }) => {
+const PeopleDashboard = ({ followings, followers, i18n }) => {
   return (
     <Grid>
       <Grid.Column width={16}>
         <Segment>
-          <Header dividing content="People following me" />
+          <Header dividing content={i18n._(t`People following me`)} />
           <Card.Group itemsPerRow={8} stackable>
             {followers && followers.map(follower => <PeopleCard key={follower.id} user={follower} />)}
           </Card.Group>
         </Segment>
         <Segment>
-          <Header dividing content="People I'm following" />
+          <Header dividing content={i18n._(t`People I'm following`)} />
           <Card.Group itemsPerRow={8} stackable>
             {followings && followings.map(following => <PeopleCard key={following.id} user={following} />)}
           </Card.Group>
@@ -50,6 +52,7 @@ const PeopleDashboard = ({ followings }, { followers }) => {
 };
 
 export default compose(
+  withI18n(),
   connect(mapState),
   firestoreConnect(props => query(props))
 )(PeopleDashboard);

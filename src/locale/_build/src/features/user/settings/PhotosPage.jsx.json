@@ -1,0 +1,66 @@
+{
+  "Your Photos": {
+    "origin": [
+      [
+        "src/features/user/settings/PhotosPage.jsx",
+        101
+      ]
+    ]
+  },
+  "Step 1 - Add Photo": {
+    "origin": [
+      [
+        "src/features/user/settings/PhotosPage.jsx",
+        105
+      ]
+    ]
+  },
+  "Drop image here or click to add": {
+    "origin": [
+      [
+        "src/features/user/settings/PhotosPage.jsx",
+        109
+      ]
+    ]
+  },
+  "Step 2 - Resize image": {
+    "origin": [
+      [
+        "src/features/user/settings/PhotosPage.jsx",
+        115
+      ]
+    ]
+  },
+  "Step 3 - Preview and Upload": {
+    "origin": [
+      [
+        "src/features/user/settings/PhotosPage.jsx",
+        134
+      ]
+    ]
+  },
+  "All Photos": {
+    "origin": [
+      [
+        "src/features/user/settings/PhotosPage.jsx",
+        154
+      ]
+    ]
+  },
+  "Main Photo": {
+    "origin": [
+      [
+        "src/features/user/settings/PhotosPage.jsx",
+        159
+      ]
+    ]
+  },
+  "Main": {
+    "origin": [
+      [
+        "src/features/user/settings/PhotosPage.jsx",
+        167
+      ]
+    ]
+  }
+}

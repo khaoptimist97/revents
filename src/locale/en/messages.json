@@ -1,4 +1,34 @@
 {
+  "About me": {
+    "translation": "",
+    "origin": [
+      [
+        "src/features/user/settings/AboutPage.jsx",
+        24
+      ],
+      [
+        "src/features/user/settings/AboutPage.jsx",
+        45
+      ],
+      [
+        "src/features/user/settings/SettingsNav.jsx",
+        15
+      ]
+    ]
+  },
+  "Account": {
+    "translation": "",
+    "origin": [
+      [
+        "src/features/user/settings/AccountPage.jsx",
+        20
+      ],
+      [
+        "src/features/user/settings/SettingsNav.jsx",
+        23
+      ]
+    ]
+  },
   "Add Reply": {
     "translation": "",
     "origin": [
@@ -8,11 +38,74 @@
       ]
     ]
   },
+  "All Photos": {
+    "translation": "",
+    "origin": [
+      [
+        "src/features/user/settings/PhotosPage.jsx",
+        154
+      ]
+    ]
+  },
+  "Basics": {
+    "translation": "",
+    "origin": [
+      [
+        "src/features/user/settings/SettingsNav.jsx",
+        12
+      ]
+    ]
+  },
+  "Cancel": {
+    "translation": "",
+    "origin": [
+      [
+        "src/features/event/EventForm/EventForm.jsx",
+        202
+      ]
+    ]
+  },
+  "Cancel Event": {
+    "translation": "",
+    "origin": [
+      [
+        "src/features/event/EventForm/EventForm.jsx",
+        210
+      ]
+    ]
+  },
   "Cancel My Place": {
     "translation": "",
     "origin": [
       [
         "src/features/event/EventDetailed/EventDetailedHeader.jsx",
+        60
+      ]
+    ]
+  },
+  "Change password": {
+    "translation": "",
+    "origin": [
+      [
+        "src/features/user/settings/AccountPage.jsx",
+        24
+      ]
+    ]
+  },
+  "Confirm Password": {
+    "translation": "",
+    "origin": [
+      [
+        "src/features/user/settings/AccountPage.jsx",
+        47
+      ]
+    ]
+  },
+  "Country of Origin": {
+    "translation": "",
+    "origin": [
+      [
+        "src/features/user/settings/AboutPage.jsx",
         60
       ]
     ]
@@ -30,6 +123,24 @@
       ]
     ]
   },
+  "Date of Birth": {
+    "translation": "",
+    "origin": [
+      [
+        "src/features/user/settings/BasicPage.jsx",
+        28
+      ]
+    ]
+  },
+  "Drop image here or click to add": {
+    "translation": "",
+    "origin": [
+      [
+        "src/features/user/settings/PhotosPage.jsx",
+        109
+      ]
+    ]
+  },
   "Error": {
     "translation": "",
     "origin": [
@@ -39,12 +150,84 @@
       ]
     ]
   },
+  "Event City": {
+    "translation": "",
+    "origin": [
+      [
+        "src/features/event/EventForm/EventForm.jsx",
+        170
+      ]
+    ]
+  },
+  "Event Date": {
+    "translation": "",
+    "origin": [
+      [
+        "src/features/event/EventForm/EventForm.jsx",
+        193
+      ]
+    ]
+  },
+  "Event Details": {
+    "translation": "",
+    "origin": [
+      [
+        "src/features/event/EventForm/EventForm.jsx",
+        147
+      ]
+    ]
+  },
+  "Event Location Details": {
+    "translation": "",
+    "origin": [
+      [
+        "src/features/event/EventForm/EventForm.jsx",
+        164
+      ]
+    ]
+  },
+  "Event Venue": {
+    "translation": "",
+    "origin": [
+      [
+        "src/features/event/EventForm/EventForm.jsx",
+        185
+      ]
+    ]
+  },
   "Events": {
     "translation": "",
     "origin": [
       [
         "src/features/nav/NavBar/NavBar.jsx",
         46
+      ]
+    ]
+  },
+  "Facebook Account": {
+    "translation": "",
+    "origin": [
+      [
+        "src/features/user/settings/AccountPage.jsx",
+        62
+      ]
+    ]
+  },
+  "FeMale": {
+    "translation": "",
+    "origin": [
+      [
+        "src/features/user/settings/BasicPage.jsx",
+        22
+      ]
+    ]
+  },
+  "Give your event a name": {
+    "translation": "",
+    "origin": [
+      [
+        "src/features/event/EventForm/EventForm.jsx",
+        149
       ]
     ]
   },
@@ -63,6 +246,15 @@
       [
         "src/features/event/EventDetailed/EventDetailedInfo.jsx",
         64
+      ]
+    ]
+  },
+  "Home Town": {
+    "translation": "",
+    "origin": [
+      [
+        "src/features/user/settings/BasicPage.jsx",
+        37
       ]
     ]
   },
@@ -170,12 +362,57 @@
     ],
     "obsolete": true
   },
+  "Main": {
+    "translation": "",
+    "origin": [
+      [
+        "src/features/user/settings/PhotosPage.jsx",
+        167
+      ]
+    ]
+  },
+  "Main Photo": {
+    "translation": "",
+    "origin": [
+      [
+        "src/features/user/settings/PhotosPage.jsx",
+        159
+      ]
+    ]
+  },
+  "Male": {
+    "translation": "",
+    "origin": [
+      [
+        "src/features/user/settings/BasicPage.jsx",
+        21
+      ]
+    ]
+  },
   "Manage Event": {
     "translation": "",
     "origin": [
       [
         "src/features/event/EventDetailed/EventDetailedHeader.jsx",
         79
+      ]
+    ]
+  },
+  "Married": {
+    "translation": "",
+    "origin": [
+      [
+        "src/features/user/settings/AboutPage.jsx",
+        39
+      ]
+    ]
+  },
+  "My Account": {
+    "translation": "",
+    "origin": [
+      [
+        "src/features/user/settings/SettingsNav.jsx",
+        25
       ]
     ]
   },
@@ -197,12 +434,39 @@
       ]
     ]
   },
+  "My Photos": {
+    "translation": "",
+    "origin": [
+      [
+        "src/features/user/settings/SettingsNav.jsx",
+        18
+      ]
+    ]
+  },
   "My Profile": {
     "translation": "",
     "origin": [
       [
         "src/features/nav/Menus/SignedInMenu.jsx",
         15
+      ]
+    ]
+  },
+  "New Password": {
+    "translation": "",
+    "origin": [
+      [
+        "src/features/user/settings/AccountPage.jsx",
+        37
+      ]
+    ]
+  },
+  "Occupation": {
+    "translation": "",
+    "origin": [
+      [
+        "src/features/user/settings/AboutPage.jsx",
+        54
       ]
     ]
   },
@@ -232,12 +496,48 @@
       ]
     ]
   },
+  "People I'm following": {
+    "translation": "",
+    "origin": [
+      [
+        "src/features/user/PeopleDashboard/PeopleDashboard.jsx",
+        44
+      ]
+    ]
+  },
+  "People following me": {
+    "translation": "",
+    "origin": [
+      [
+        "src/features/user/PeopleDashboard/PeopleDashboard.jsx",
+        38
+      ]
+    ]
+  },
   "Person": {
     "translation": "",
     "origin": [
       [
         "src/features/event/EventDetailed/EventDetailedSidebar.jsx",
         10
+      ]
+    ]
+  },
+  "Profile": {
+    "translation": "",
+    "origin": [
+      [
+        "src/features/user/settings/SettingsNav.jsx",
+        10
+      ]
+    ]
+  },
+  "Reactivate Event": {
+    "translation": "",
+    "origin": [
+      [
+        "src/features/event/EventForm/EventForm.jsx",
+        210
       ]
     ]
   },
@@ -251,6 +551,24 @@
       [
         "src/features/nav/Menus/SignedOutMenu.jsx",
         10
+      ]
+    ]
+  },
+  "Relationship": {
+    "translation": "",
+    "origin": [
+      [
+        "src/features/user/settings/AboutPage.jsx",
+        37
+      ]
+    ]
+  },
+  "Select your interests": {
+    "translation": "",
+    "origin": [
+      [
+        "src/features/user/settings/AboutPage.jsx",
+        52
       ]
     ]
   },
@@ -290,6 +608,60 @@
       ]
     ]
   },
+  "Single": {
+    "translation": "",
+    "origin": [
+      [
+        "src/features/user/settings/AboutPage.jsx",
+        31
+      ]
+    ]
+  },
+  "Step 1 - Add Photo": {
+    "translation": "",
+    "origin": [
+      [
+        "src/features/user/settings/PhotosPage.jsx",
+        105
+      ]
+    ]
+  },
+  "Step 2 - Resize image": {
+    "translation": "",
+    "origin": [
+      [
+        "src/features/user/settings/PhotosPage.jsx",
+        115
+      ]
+    ]
+  },
+  "Step 3 - Preview and Upload": {
+    "translation": "",
+    "origin": [
+      [
+        "src/features/user/settings/PhotosPage.jsx",
+        134
+      ]
+    ]
+  },
+  "Submit": {
+    "translation": "",
+    "origin": [
+      [
+        "src/features/event/EventForm/EventForm.jsx",
+        199
+      ]
+    ]
+  },
+  "Tell us about your event": {
+    "translation": "",
+    "origin": [
+      [
+        "src/features/event/EventForm/EventForm.jsx",
+        162
+      ]
+    ]
+  },
   "The event you are looking for is not found!": {
     "translation": "",
     "origin": [
@@ -312,12 +684,122 @@
       ]
     ]
   },
+  "Update Password": {
+    "translation": "",
+    "origin": [
+      [
+        "src/features/user/settings/AccountPage.jsx",
+        55
+      ]
+    ]
+  },
+  "Update Profile": {
+    "translation": "",
+    "origin": [
+      [
+        "src/features/user/settings/AboutPage.jsx",
+        63
+      ],
+      [
+        "src/features/user/settings/BasicPage.jsx",
+        44
+      ]
+    ]
+  },
   "View": {
     "translation": "",
     "origin": [
       [
         "src/features/event/EventList/EventListItem.jsx",
         57
+      ]
+    ]
+  },
+  "What is your event about": {
+    "translation": "",
+    "origin": [
+      [
+        "src/features/event/EventForm/EventForm.jsx",
+        155
+      ]
+    ]
+  },
+  "Your Photos": {
+    "translation": "",
+    "origin": [
+      [
+        "src/features/user/settings/PhotosPage.jsx",
+        101
+      ]
+    ]
+  },
+  "about.completePro": {
+    "translation": "",
+    "defaults": "Complete your profile to get the most out of this site",
+    "origin": [
+      [
+        "src/features/user/settings/AboutPage.jsx",
+        26
+      ]
+    ]
+  },
+  "about.tellYours": {
+    "translation": "",
+    "defaults": "Tell us about yourself",
+    "origin": [
+      [
+        "src/features/user/settings/AboutPage.jsx",
+        43
+      ]
+    ]
+  },
+  "account.facebook": {
+    "translation": "",
+    "defaults": "Please visit Facebook to update your account settings",
+    "origin": [
+      [
+        "src/features/user/settings/AccountPage.jsx",
+        64
+      ]
+    ]
+  },
+  "account.goFB": {
+    "translation": "",
+    "defaults": "Go to Facebook",
+    "origin": [
+      [
+        "src/features/user/settings/AccountPage.jsx",
+        68
+      ]
+    ]
+  },
+  "account.goGG": {
+    "translation": "",
+    "defaults": "Go to Google",
+    "origin": [
+      [
+        "src/features/user/settings/AccountPage.jsx",
+        81
+      ]
+    ]
+  },
+  "account.google": {
+    "translation": "",
+    "defaults": "Please visit Google to update your account settings",
+    "origin": [
+      [
+        "src/features/user/settings/AccountPage.jsx",
+        77
+      ]
+    ]
+  },
+  "account.userForm": {
+    "translation": "",
+    "defaults": "Use this form to update your account settings",
+    "origin": [
+      [
+        "src/features/user/settings/AccountPage.jsx",
+        26
       ]
     ]
   },
