@@ -2,6 +2,7 @@ import React from 'react';
 import { Card, Grid, Header, Image, Segment, Tab } from 'semantic-ui-react';
 import { Link } from 'react-router-dom';
 import format from 'date-fns/format';
+import { t } from '@lingui/macro';
 
 const panes = [
   { menuItem: 'All Events', pane: { key: 'allEvents' } },
@@ -9,11 +10,11 @@ const panes = [
   { menuItem: 'Future Events', pane: { key: 'futureEvents' } },
   { menuItem: 'Hosting', pane: { key: 'hosted' } }
 ];
-const UserDetailedEvents = ({ events, eventLoading, changeTab }) => {
+const UserDetailedEvents = ({ events, eventLoading, changeTab, i18n }) => {
   return (
     <Grid.Column width={12}>
       <Segment attached loading={eventLoading}>
-        <Header icon="calendar" content="Events" />
+        <Header icon="calendar" content={i18n._(t`Events`)} />
 
         <Tab onTabChange={(e, data) => changeTab(e, data)} panes={panes} menu={{ secondary: true, pointing: true }} />
 

@@ -1,4 +1,13 @@
 {
+  "About": {
+    "translation": "",
+    "origin": [
+      [
+        "src/features/user/UserDetailed/UserDetailedDescription.jsx",
+        11
+      ]
+    ]
+  },
   "About me": {
     "translation": "",
     "origin": [
@@ -132,12 +141,30 @@
       ]
     ]
   },
+  "Description of user": {
+    "translation": "",
+    "origin": [
+      [
+        "src/features/user/UserDetailed/UserDetailedDescription.jsx",
+        25
+      ]
+    ]
+  },
   "Drop image here or click to add": {
     "translation": "",
     "origin": [
       [
         "src/features/user/settings/PhotosPage.jsx",
         109
+      ]
+    ]
+  },
+  "Edit Profile": {
+    "translation": "",
+    "origin": [
+      [
+        "src/features/user/UserDetailed/UserDetailedSidebar.jsx",
+        11
       ]
     ]
   },
@@ -201,6 +228,10 @@
       [
         "src/features/nav/NavBar/NavBar.jsx",
         46
+      ],
+      [
+        "src/features/user/UserDetailed/UserDetailedEvents.jsx",
+        17
       ]
     ]
   },
@@ -219,6 +250,15 @@
       [
         "src/features/user/settings/BasicPage.jsx",
         22
+      ]
+    ]
+  },
+  "Follow User": {
+    "translation": "",
+    "origin": [
+      [
+        "src/features/user/UserDetailed/UserDetailedSidebar.jsx",
+        15
       ]
     ]
   },
@@ -276,6 +316,28 @@
       ]
     ]
   },
+  "I am a": {
+    "translation": "",
+    "origin": [
+      [
+        "src/features/user/UserDetailed/UserDetailedDescription.jsx",
+        13
+      ]
+    ]
+  },
+  "Interests": {
+    "translation": "",
+    "origin": [
+      [
+        "src/features/user/UserDetailed/UserDetailedDescription.jsx",
+        28
+      ],
+      [
+        "src/features/user/UserDetailed/UserDetailedDescription.jsx",
+        38
+      ]
+    ]
+  },
   "JOIN THIS EVENT": {
     "translation": "",
     "origin": [
@@ -295,6 +357,15 @@
       [
         "src/features/auth/Register/RegisterForm.jsx",
         25
+      ]
+    ]
+  },
+  "Lives in": {
+    "translation": "",
+    "origin": [
+      [
+        "src/features/user/UserDetailed/UserDetailedHeader.jsx",
+        24
       ]
     ]
   },
@@ -407,6 +478,15 @@
       ]
     ]
   },
+  "Member Since": {
+    "translation": "",
+    "origin": [
+      [
+        "src/features/user/UserDetailed/UserDetailedDescription.jsx",
+        20
+      ]
+    ]
+  },
   "My Account": {
     "translation": "",
     "origin": [
@@ -461,12 +541,39 @@
       ]
     ]
   },
+  "No": {
+    "translation": "",
+    "origin": [
+      [
+        "src/features/user/UserDetailed/UserDetailedDescription.jsx",
+        38
+      ]
+    ]
+  },
+  "Not found": {
+    "translation": "",
+    "origin": [
+      [
+        "src/features/user/UserDetailed/UserDetailedPage.jsx",
+        50
+      ]
+    ]
+  },
   "Occupation": {
     "translation": "",
     "origin": [
       [
         "src/features/user/settings/AboutPage.jsx",
         54
+      ]
+    ]
+  },
+  "Originally from": {
+    "translation": "",
+    "origin": [
+      [
+        "src/features/user/UserDetailed/UserDetailedDescription.jsx",
+        17
       ]
     ]
   },
@@ -520,6 +627,15 @@
       [
         "src/features/event/EventDetailed/EventDetailedSidebar.jsx",
         10
+      ]
+    ]
+  },
+  "Photos": {
+    "translation": "",
+    "origin": [
+      [
+        "src/features/user/UserDetailed/UserDetailedPhotos.jsx",
+        12
       ]
     ]
   },
@@ -684,6 +800,24 @@
       ]
     ]
   },
+  "This is not the user you are looking for": {
+    "translation": "",
+    "origin": [
+      [
+        "src/features/user/UserDetailed/UserDetailedPage.jsx",
+        50
+      ]
+    ]
+  },
+  "Unfollow": {
+    "translation": "",
+    "origin": [
+      [
+        "src/features/user/UserDetailed/UserDetailedSidebar.jsx",
+        19
+      ]
+    ]
+  },
   "Update Password": {
     "translation": "",
     "origin": [
@@ -803,6 +937,15 @@
       ]
     ]
   },
+  "age": {
+    "translation": "",
+    "origin": [
+      [
+        "src/features/user/UserDetailed/UserDetailedHeader.jsx",
+        11
+      ]
+    ]
+  },
   "app.GetStarted": {
     "translation": "",
     "defaults": "Get Started",
@@ -820,6 +963,15 @@
       [
         "src/features/home/HomePage.jsx",
         14
+      ]
+    ]
+  },
+  "city": {
+    "translation": "",
+    "origin": [
+      [
+        "src/features/user/UserDetailed/UserDetailedHeader.jsx",
+        24
       ]
     ]
   },
@@ -863,6 +1015,19 @@
       ]
     ]
   },
+  "occupation": {
+    "translation": "",
+    "origin": [
+      [
+        "src/features/user/UserDetailed/UserDetailedDescription.jsx",
+        14
+      ],
+      [
+        "src/features/user/UserDetailed/UserDetailedHeader.jsx",
+        21
+      ]
+    ]
+  },
   "page.error": {
     "translation": "",
     "defaults": "Error Not Found",
@@ -880,6 +1045,35 @@
       [
         "src/features/event/EventDetailed/EventDetailedChat.jsx",
         52
+      ]
+    ]
+  },
+  "unknown": {
+    "translation": "",
+    "origin": [
+      [
+        "src/features/user/UserDetailed/UserDetailedDescription.jsx",
+        14
+      ],
+      [
+        "src/features/user/UserDetailed/UserDetailedDescription.jsx",
+        17
+      ],
+      [
+        "src/features/user/UserDetailed/UserDetailedDescription.jsx",
+        22
+      ],
+      [
+        "src/features/user/UserDetailed/UserDetailedHeader.jsx",
+        11
+      ],
+      [
+        "src/features/user/UserDetailed/UserDetailedHeader.jsx",
+        21
+      ],
+      [
+        "src/features/user/UserDetailed/UserDetailedHeader.jsx",
+        24
       ]
     ]
   }

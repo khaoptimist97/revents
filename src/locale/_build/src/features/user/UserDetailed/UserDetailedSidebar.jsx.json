@@ -1,0 +1,26 @@
+{
+  "Edit Profile": {
+    "origin": [
+      [
+        "src/features/user/UserDetailed/UserDetailedSidebar.jsx",
+        11
+      ]
+    ]
+  },
+  "Follow User": {
+    "origin": [
+      [
+        "src/features/user/UserDetailed/UserDetailedSidebar.jsx",
+        15
+      ]
+    ]
+  },
+  "Unfollow": {
+    "origin": [
+      [
+        "src/features/user/UserDetailed/UserDetailedSidebar.jsx",
+        19
+      ]
+    ]
+  }
+}

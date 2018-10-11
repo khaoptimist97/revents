@@ -1,0 +1,18 @@
+{
+  "Not found": {
+    "origin": [
+      [
+        "src/features/user/UserDetailed/UserDetailedPage.jsx",
+        50
+      ]
+    ]
+  },
+  "This is not the user you are looking for": {
+    "origin": [
+      [
+        "src/features/user/UserDetailed/UserDetailedPage.jsx",
+        50
+      ]
+    ]
+  }
+}

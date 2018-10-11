@@ -1,13 +1,14 @@
 import React from 'react';
 import { Segment, Item, Header } from 'semantic-ui-react';
 import differenceInYears from 'date-fns/difference_in_years';
+import { t } from '@lingui/macro';
 
-const UserDetailedHeader = ({ profile }) => {
+const UserDetailedHeader = ({ profile, i18n }) => {
   let age;
   if (profile.dateOfBirth) {
     age = differenceInYears(Date.now(), profile.dateOfBirth.toDate());
   } else {
-    age = 'unknown age';
+    age = `${i18n._(t`unknown`)} ${i18n._(t`age`)}`;
   }
   return (
     <Segment>
@@ -17,10 +18,10 @@ const UserDetailedHeader = ({ profile }) => {
           <Item.Content verticalAlign="bottom">
             <Header as="h1">{profile.displayName}</Header>
             <br />
-            <Header as="h3">{profile.occupation || 'unknown ocupation'}</Header>
+            <Header as="h3">{profile.occupation || `${i18n._(t`unknown`)} ${i18n._(t`occupation`)}`}</Header>
             <br />
             <Header as="h3">
-              {age}, Lives in {profile.city || 'unknown city'}
+              {age}, {i18n._(t`Lives in`)} {profile.city || `${i18n._(t`unknown`)} ${i18n._(t`city`)}`}
             </Header>
           </Item.Content>
         </Item>

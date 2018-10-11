@@ -12,6 +12,8 @@ import { userDetailedQuery } from '../userQueries';
 import LoadingComponent from '../../../app/layout/LoadingComponent';
 import { getUserEvents, followUser, unfollowUser } from '../../user/userActions';
 import { toastr } from 'react-redux-toastr';
+import { withI18n } from '@lingui/react';
+import { t } from '@lingui/macro';
 
 const mapState = (state, ownProps) => {
   let userUid = null;
@@ -45,7 +47,7 @@ class UserDetailedPage extends Component {
     let user = await this.props.firestore.get(`users/${this.props.match.params.id}`);
     if (!user.exists) {
       this.props.history.push('/error');
-      toastr.error('Not found', 'This is not the event you are looking for');
+      toastr.error(this.props.i18n._(t`Not found`), this.props.i18n._(t`This is not the user you are looking for`));
     }
     await this.props.getUserEvents(this.props.userUid);
   }
@@ -65,7 +67,8 @@ class UserDetailedPage extends Component {
       followUser,
       unfollowUser,
       following,
-      match
+      match,
+      i18n
     } = this.props;
     const isCurrentUser = auth.uid === userUid;
     const loading = requesting[`users/${match.params.id}`];
@@ -74,10 +77,10 @@ class UserDetailedPage extends Component {
     return (
       <Grid>
         <Grid.Column width={16}>
-          <UserDetailedHeader profile={profile} />
+          <UserDetailedHeader profile={profile} i18n={i18n} />
         </Grid.Column>
         <Grid.Column width={12}>
-          <UserDetailedDescription profile={profile} />
+          <UserDetailedDescription profile={profile} i18n={i18n} />
         </Grid.Column>
         <UserDetailedSidebar
           isCurrentUser={isCurrentUser}
@@ -85,21 +88,23 @@ class UserDetailedPage extends Component {
           profile={profile}
           isFollowing={isFollowing}
           unfollowUser={unfollowUser}
+          i18n={i18n}
         />
         {photos && photos.length > 0 ? (
           <Grid.Column width={12}>
-            <UserDetailedPhotos photos={photos} auth={auth} />
+            <UserDetailedPhotos photos={photos} auth={auth} i18n={i18n} />
           </Grid.Column>
         ) : (
           ''
         )}
-        <UserDetailedEvents events={events} eventLoading={eventLoading} changeTab={this.changeTab} />
+        <UserDetailedEvents events={events} eventLoading={eventLoading} changeTab={this.changeTab} i18n={i18n} />
       </Grid>
     );
   }
 }
 
 export default compose(
+  withI18n(),
   connect(
     mapState,
     actions

@@ -1,0 +1,50 @@
+{
+  "unknown": {
+    "origin": [
+      [
+        "src/features/user/UserDetailed/UserDetailedHeader.jsx",
+        11
+      ],
+      [
+        "src/features/user/UserDetailed/UserDetailedHeader.jsx",
+        21
+      ],
+      [
+        "src/features/user/UserDetailed/UserDetailedHeader.jsx",
+        24
+      ]
+    ]
+  },
+  "age": {
+    "origin": [
+      [
+        "src/features/user/UserDetailed/UserDetailedHeader.jsx",
+        11
+      ]
+    ]
+  },
+  "occupation": {
+    "origin": [
+      [
+        "src/features/user/UserDetailed/UserDetailedHeader.jsx",
+        21
+      ]
+    ]
+  },
+  "Lives in": {
+    "origin": [
+      [
+        "src/features/user/UserDetailed/UserDetailedHeader.jsx",
+        24
+      ]
+    ]
+  },
+  "city": {
+    "origin": [
+      [
+        "src/features/user/UserDetailed/UserDetailedHeader.jsx",
+        24
+      ]
+    ]
+  }
+}

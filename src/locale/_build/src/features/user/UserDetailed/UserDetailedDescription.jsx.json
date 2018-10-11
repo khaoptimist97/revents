@@ -1,0 +1,86 @@
+{
+  "About": {
+    "origin": [
+      [
+        "src/features/user/UserDetailed/UserDetailedDescription.jsx",
+        11
+      ]
+    ]
+  },
+  "I am a": {
+    "origin": [
+      [
+        "src/features/user/UserDetailed/UserDetailedDescription.jsx",
+        13
+      ]
+    ]
+  },
+  "unknown": {
+    "origin": [
+      [
+        "src/features/user/UserDetailed/UserDetailedDescription.jsx",
+        14
+      ],
+      [
+        "src/features/user/UserDetailed/UserDetailedDescription.jsx",
+        17
+      ],
+      [
+        "src/features/user/UserDetailed/UserDetailedDescription.jsx",
+        22
+      ]
+    ]
+  },
+  "occupation": {
+    "origin": [
+      [
+        "src/features/user/UserDetailed/UserDetailedDescription.jsx",
+        14
+      ]
+    ]
+  },
+  "Originally from": {
+    "origin": [
+      [
+        "src/features/user/UserDetailed/UserDetailedDescription.jsx",
+        17
+      ]
+    ]
+  },
+  "Member Since": {
+    "origin": [
+      [
+        "src/features/user/UserDetailed/UserDetailedDescription.jsx",
+        20
+      ]
+    ]
+  },
+  "Description of user": {
+    "origin": [
+      [
+        "src/features/user/UserDetailed/UserDetailedDescription.jsx",
+        25
+      ]
+    ]
+  },
+  "Interests": {
+    "origin": [
+      [
+        "src/features/user/UserDetailed/UserDetailedDescription.jsx",
+        28
+      ],
+      [
+        "src/features/user/UserDetailed/UserDetailedDescription.jsx",
+        38
+      ]
+    ]
+  },
+  "No": {
+    "origin": [
+      [
+        "src/features/user/UserDetailed/UserDetailedDescription.jsx",
+        38
+      ]
+    ]
+  }
+}
