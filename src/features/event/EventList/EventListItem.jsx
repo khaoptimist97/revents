@@ -7,10 +7,16 @@ import { ObjectToArray } from '../../../app/common/util/helpers';
 import { Trans } from '@lingui/macro';
 import { withI18n } from '@lingui/react';
 import { t } from '@lingui/macro';
+import moment from 'moment';
 
 class EventListItem extends Component {
   render() {
-    const { event, i18n } = this.props;
+    const { event, i18n, activeLanguage } = this.props;
+    var localization =
+      activeLanguage === 'en' ? require(`moment/locale/en-ca`) : require(`moment/locale/${activeLanguage}`);
+    var date = moment(format(event.date.toDate(), 'DD-MM-YYYY'), 'DD-MM-YYYY')
+      .locale(activeLanguage, localization)
+      .format('LL');
     return (
       <Segment.Group>
         <Segment>
@@ -39,7 +45,7 @@ class EventListItem extends Component {
         </Segment>
         <Segment>
           <span>
-            <Icon name="clock" /> {format(event.date.toDate(), 'dddd Do MMMM')} at{' '}
+            <Icon name="clock" /> {activeLanguage === 'en' ? format(event.date.toDate(), 'dddd Do MMMM') : date} at{' '}
             {format(event.date.toDate(), 'HH:mm')} |<Icon name="marker" /> {event.venue}
           </span>
         </Segment>

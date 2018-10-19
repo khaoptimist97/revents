@@ -5,8 +5,10 @@ import Loadable from 'react-loadable';
 import LoadingComponent from '../../app/layout/LoadingComponent';
 import { UserIsAuthenticated } from '../../features/auth/authWrapper';
 import { I18nProvider } from '@lingui/react';
-import catalogVi from '../../locale/vi/messages';
-import catalogEn from '../../locale/en/messages';
+import { withRouter } from 'react-router';
+
+// import catalogVi from '../../locale/vi/messages';
+// import catalogEn from '../../locale/en/messages';
 
 const AsyncHomePage = Loadable({
   loader: () => import('../../features/home/HomePage'),
@@ -50,13 +52,46 @@ const AsyncModalManager = Loadable({
 });
 
 class App extends Component {
+  state = {
+    language: 'en',
+    catalogs: {}
+  };
+  loadLanguage = async language => {
+    const catalogs = await import(`../../locale/${language}/messages`);
+    this.setState(state => ({
+      catalogs: {
+        ...state.catalogs,
+        [language]: catalogs
+      }
+    }));
+  };
+  componentDidMount() {
+    this.loadLanguage(this.state.language);
+  }
+  componentWillUpdate(nextProps, { language, catalogs }) {
+    if (language !== this.state.language && !catalogs[language]) {
+      this.loadLanguage(language);
+      return false;
+    }
+    return true;
+  }
+  handleSetLanguage = language => {
+    this.setState({ language });
+  };
+
   render() {
+    const { language, catalogs } = this.state;
+    const Authenticated = UserIsAuthenticated(({ children, ...props }) => React.cloneElement(children, props));
     return (
-      <I18nProvider language="vi" catalogs={{ vi: catalogVi }}>
+      <I18nProvider language={language} catalogs={catalogs}>
         <div>
           <AsyncModalManager />
           <Switch>
-            <Route exact path="/" component={AsyncHomePage} />
+            <Route
+              exact
+              path="/"
+              render={routeProps => <AsyncHomePage {...routeProps} handleSetLanguage={this.handleSetLanguage} />}
+            />
           </Switch>
           <Route
             path="/(.+)"
@@ -65,11 +100,23 @@ class App extends Component {
                 <AsyncNavBar />
                 <Container className="main">
                   <Switch>
-                    <Route path="/events" component={AsyncEventDashboard} />
-                    <Route path="/event/:id" component={AsyncEventDetailedPage} />
+                    <Route
+                      path="/events"
+                      render={routeProps => (
+                        <AsyncEventDashboard {...routeProps} activeLanguage={this.state.language} />
+                      )}
+                    />
+                    <Route
+                      path="/event/:id"
+                      render={routeProps => (
+                        <AsyncEventDetailedPage {...routeProps} activeLanguage={this.state.language} />
+                      )}
+                    />
                     <Route path="/manage/:id" component={UserIsAuthenticated(AsyncEventForm)} />
                     <Route path="/people" component={UserIsAuthenticated(AsyncPeopleDashboard)} />
+
                     <Route path="/profile/:id" component={UserIsAuthenticated(AsyncUserDetailedPage)} />
+
                     <Route path="/settings" component={UserIsAuthenticated(AsyncSettingsDashboard)} />
                     <Route path="/createEvent" component={UserIsAuthenticated(AsyncEventForm)} />
                     <Route path="/error" component={AsyncNotFound} />
@@ -86,4 +133,4 @@ class App extends Component {
   }
 }
 
-export default App;
+export default withRouter(App);

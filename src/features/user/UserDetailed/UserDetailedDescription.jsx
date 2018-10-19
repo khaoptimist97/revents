@@ -17,9 +17,9 @@ const UserDetailedDescription = ({ profile, i18n }) => {
             {i18n._(t`Originally from`)} <strong>{profile.origin || i18n._(t`unknown`)}</strong>
           </p>
           <p>
-            {i18n._(t`Member Since`)}:
+            {i18n._(t`Member Since`)}:{' '}
             <strong>
-              {profile.createdAt && (format(profile.createdAt.toDate(), 'Do MMMM YYYY') || i18n._(t`unknown`))}
+              {profile.createdAt && (format(profile.createdAt.toDate(), 'Do MM YYYY') || i18n._(t`unknown`))}
             </strong>
           </p>
           <p>{i18n._(t`Description of user`)}</p>

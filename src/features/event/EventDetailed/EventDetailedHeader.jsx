@@ -3,6 +3,7 @@ import { Segment, Image, Item, Header, Button, Label } from 'semantic-ui-react';
 import { Link } from 'react-router-dom';
 import format from 'date-fns/format';
 import { t } from '@lingui/macro';
+import moment from 'moment';
 
 const eventImageStyle = {
   filter: 'brightness(30%)'
@@ -25,11 +26,16 @@ const EventDetailedHeader = ({
   loading,
   authenticated,
   openModal,
-  i18n
+  i18n,
+  activeLanguage
 }) => {
   let eventDate;
   if (event.date) {
-    eventDate = event.date.toDate();
+    var localization =
+      activeLanguage === 'en' ? require(`moment/locale/en-ca`) : require(`moment/locale/${activeLanguage}`);
+    eventDate = moment(format(event.date.toDate(), 'DD-MM-YYYY'), 'DD-MM-YYYY')
+      .locale(activeLanguage, localization)
+      .format('LL');
   }
   return (
     <Segment.Group>
@@ -41,7 +47,7 @@ const EventDetailedHeader = ({
             <Item>
               <Item.Content>
                 <Header size="huge" content={event.title} style={{ color: 'white' }} />
-                <p>{format(eventDate, 'dddd Do MMMM')}</p>
+                <p>{eventDate}</p>
                 <p>
                   {i18n._(t`Hosted by`)}{' '}
                   <strong>{event.attendees && Object.values(event.attendees)[0].displayName}</strong>

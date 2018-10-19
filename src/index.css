@@ -32,7 +32,14 @@ body {
   min-height: 700px;
   padding: 1em 0 !important;
 }
-
+.ui.text.container {
+  position: relative;
+}
+.masthead .list {
+  position: absolute;
+  top: 2%;
+  right: 2%;
+}
 .masthead .ui.menu .ui.button,
 .ui.menu a.ui.inverted.button {
   margin-left: 0.5em;

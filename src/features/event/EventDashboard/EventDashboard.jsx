@@ -33,7 +33,7 @@ class EventDashboard extends Component {
   };
 
   async componentDidMount() {
-    let next = await this.props.getEventsForDashboard();
+    let next = await this.props.getEventsForDashboard(null, this.props.activeLanguage);
     if (next && next.docs && next.docs.length > 1) {
       this.setState({
         moreEvents: true,
@@ -51,7 +51,7 @@ class EventDashboard extends Component {
   getNextEvents = async () => {
     const { events, getEventsForDashboard } = this.props;
     const lastEvent = events && events[events.length - 1];
-    let next = await getEventsForDashboard(lastEvent);
+    let next = await getEventsForDashboard(lastEvent, this.props.activeLanguage);
     if (next && next.docs && next.docs.length <= 1) {
       this.setState({
         moreEvents: false
@@ -82,6 +82,7 @@ class EventDashboard extends Component {
               events={loadedEvents}
               loading={loading}
               getNextEvents={this.getNextEvents}
+              activeLanguage={this.props.activeLanguage}
             />
           </div>
         </Grid.Column>

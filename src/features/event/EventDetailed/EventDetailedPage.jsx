@@ -18,9 +18,12 @@ import { t } from '@lingui/macro';
 
 const mapState = (state, ownProps) => {
   let event = {};
-
+  let eventTrans = {};
+  if (state.firestore.ordered.events_translation && state.firestore.ordered.events_translation[0]) {
+    eventTrans = state.firestore.ordered.events_translation[0];
+  }
   if (state.firestore.ordered.events && state.firestore.ordered.events[0]) {
-    event = state.firestore.ordered.events[0];
+    event = { ...state.firestore.ordered.events[0], description: eventTrans.description, title: eventTrans.title };
   }
 
   return {
@@ -47,11 +50,13 @@ class EventDetailedPage extends Component {
   async componentDidMount() {
     const { firestore, match, i18n } = this.props;
     let event = await firestore.get(`events/${match.params.id}`);
-    if (!event.exists) {
+    let eventTrans = await firestore.get(`events_translation/${match.params.id}_${this.props.activeLanguage}`);
+    if (!event.exists && !eventTrans.exists) {
       this.props.history.push('/error');
       toastr.error(i18n._(t`Error`), i18n._(t`The event you are looking for is not found!`));
     }
     await firestore.setListener(`events/${match.params.id}`);
+    await firestore.setListener(`events_translation/${match.params.id}_${this.props.activeLanguage}`);
     this.setState({
       initialLoading: false
     });
@@ -100,6 +105,7 @@ class EventDetailedPage extends Component {
             openModal={openModal}
             cancelGoingToEvent={cancelGoingToEvent}
             i18n={this.props.i18n}
+            activeLanguage={this.props.activeLanguage}
           />
           <EventDetailedInfo event={event} i18n={this.props.i18n} />
           {authenticated && (

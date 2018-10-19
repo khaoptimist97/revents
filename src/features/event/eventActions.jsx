@@ -13,7 +13,28 @@ export const createEvent = event => {
     const photoURL = getState().firebase.profile.photoURL;
     let newEvent = createNewEvent(user, photoURL, event);
     try {
-      let createdEvent = await firestore.add('events', newEvent);
+      let createdEvent = await firestore.add('events', {
+        attendees: newEvent.attendees,
+        category: newEvent.category,
+        city: newEvent.city,
+        created: newEvent.created,
+        date: newEvent.date,
+        hostPhotoURL: newEvent.hostPhotoURL,
+        hostUid: newEvent.hostUid,
+        hostedBy: newEvent.hostedBy,
+        venue: newEvent.venue,
+        venueLatLng: newEvent.venueLatLng
+      });
+      await firestore.set(`events_translation/${createdEvent.id}_en`, {
+        description: newEvent.description,
+        title: newEvent.title,
+        events_non_trans_id: createdEvent.id
+      });
+      await firestore.set(`events_translation/${createdEvent.id}_vi`, {
+        description: newEvent.description,
+        title: newEvent.title,
+        events_non_trans_id: createdEvent.id
+      });
       await firestore.set(`event_attendee/${createdEvent.id}_${user.uid}`, {
         eventId: createdEvent.id,
         userUid: user.uid,
@@ -23,6 +44,7 @@ export const createEvent = event => {
       toastr.success('Success!', 'Event has been created');
     } catch (error) {
       toastr.error('Oops! Something went wrong');
+      console.log(error.message);
     }
   };
 };
@@ -81,10 +103,11 @@ export const cancelToggle = (cancelled, eventId) => async (dispatch, getState, {
   }
 };
 
-export const getEventsForDashboard = lastEvent => async (dispatch, getState) => {
+export const getEventsForDashboard = (lastEvent, activeLanguage) => async (dispatch, getState) => {
   let today = new Date(Date.now());
   const firestore = firebase.firestore();
   const queryRef = firestore.collection('events');
+  const transQueryRef = firestore.collection('events_translation');
   try {
     dispatch(asyncActionStart());
     // Kiem tra co lastEvent ko? Vi do la truong hop initial load, moi dau load event len page
@@ -107,10 +130,19 @@ export const getEventsForDashboard = lastEvent => async (dispatch, getState) => 
       return querySnapshot;
     }
     let events = [];
+
     for (let i = 0; i < querySnapshot.docs.length; i++) {
-      let evt = { ...querySnapshot.docs[i].data(), id: querySnapshot.docs[i].id };
+      // Get events_translation doc
+      let eventsTransSnapshot = await transQueryRef.doc(`${querySnapshot.docs[i].id}_${activeLanguage}`).get();
+      let evt = {
+        ...querySnapshot.docs[i].data(),
+        id: querySnapshot.docs[i].id,
+        description: eventsTransSnapshot.data().description,
+        title: eventsTransSnapshot.data().title
+      };
       events.push(evt);
     }
+    console.log(events);
     dispatch({ type: FETCH_EVENTS, payload: { events } });
     dispatch(asyncActionFinish());
     // Return de su dung thong tin length cua querySnapshot tren UI
